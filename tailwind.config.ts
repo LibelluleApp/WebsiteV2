@@ -12,6 +12,15 @@ export default {
       fontFamily: {
         "host-grotesk": ["var(--font-host-grotesk)", "sans-serif"],
         outfit: ["var(--font-outfit)", "sans-serif"],
+        ubuntu: ["var(--font-ubuntu)", "sans-serif"],
+      },
+      letterSpacing: {
+        // Vos espacements personnalisés
+        "tight-custom": "-1.20px",
+      },
+      height: {
+        // Vos hauteurs personnalisées
+        0.5: "0.03125rem",
       },
       colors: {
         blue: {
