@@ -3,19 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-host-grotesk: "Host Grotesk", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --blue-ribbon-50: rgba(237, 248, 255, 1);
+  --blue-ribbon-100: rgba(214, 237, 255, 1);
+  --blue-ribbon-200: rgba(183, 225, 255, 1);
+  --blue-ribbon-200-2: rgba(183, 225, 255, 1);
+  --blue-ribbon-300: rgba(133, 209, 255, 1);
+  --blue-ribbon-400: rgba(75, 181, 255, 1);
+  --blue-ribbon-600: rgba(10, 114, 255, 1);
+  --blue-ribbon-500: rgba(34, 147, 255, 1);
+  --blue-ribbon-700: rgba(7, 96, 251, 1);
+  --blue-ribbon-800: rgba(11, 73, 194, 1);
+  --blue-ribbon-900: rgba(15, 65, 153, 1);
+  --blue-ribbon-900-2: rgba(15, 65, 153, 1);
+  --blue-ribbon-950: rgba(15, 41, 92, 1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-host-grotesk: "Host Grotesk", sans-serif;
+    --font-outfit: "Outfit", sans-serif;
+    --blue-ribbon-50: rgba(237, 248, 255, 1);
+    --blue-ribbon-100: rgba(214, 237, 255, 1);
+    --blue-ribbon-200: rgba(183, 225, 255, 1);
+    --blue-ribbon-200-2: rgba(183, 225, 255, 1);
+    --blue-ribbon-300: rgba(133, 209, 255, 1);
+    --blue-ribbon-400: rgba(75, 181, 255, 1);
+    --blue-ribbon-600: rgba(10, 114, 255, 1);
+    --blue-ribbon-500: rgba(34, 147, 255, 1);
+    --blue-ribbon-700: rgba(7, 96, 251, 1);
+    --blue-ribbon-800: rgba(11, 73, 194, 1);
+    --blue-ribbon-900: rgba(15, 65, 153, 1);
+    --blue-ribbon-900-2: rgba(15, 65, 153, 1);
+    --blue-ribbon-950: rgba(15, 41, 92, 1);
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
