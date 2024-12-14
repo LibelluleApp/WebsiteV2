@@ -70,8 +70,8 @@ export default function Header() {
             className="flex items-center gap-[9px] z-50"
             onClick={toggleMenu}
           >
-            <Image src="/logo.svg" alt="Logo" width={12} height={18} />
-            <h1 className="text-lg font-black font-ubuntu text-blue-700 tracking-tight-custom">
+            <Image src="/logo.svg" alt="Logo" width={16} height={21} />
+            <h1 className="text-xl font-black font-ubuntu text-blue-700 tracking-tight-custom">
               Libellule
             </h1>
           </Link>
@@ -81,9 +81,9 @@ export default function Header() {
             className="z-50"
           >
             {isMenuOpen ? (
-              <X className="text-blue-700" width={24} height={24} />
+              <X className="text-blue-700" width={26} height={26} />
             ) : (
-              <Menu className="text-blue-700" width={24} height={24} />
+              <Menu className="text-blue-700" width={26} height={26} />
             )}
           </motion.button>
         </div>
