@@ -8,11 +8,36 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const THEMES = {
-  azure: { name: "Azure", color: "bg-blue-900", textColor: "text-blue-900" },
-  petal: { name: "Petal", color: "bg-pink", textColor: "text-pink" },
-  amethyst: { name: "Améthyst", color: "bg-purple", textColor: "text-purple" },
-  corail: { name: "Corail", color: "bg-orange", textColor: "text-orange" },
-  emerald: { name: "Emerald", color: "bg-green", textColor: "text-green" },
+  azure: {
+    name: "Azure",
+    color: "bg-blue-bg",
+    textColor: "text-blue-bg",
+    border: "border-blue-border",
+  },
+  petal: {
+    name: "Petal",
+    color: "bg-pink-bg",
+    textColor: "text-pink-bg",
+    border: "border-pink-border",
+  },
+  amethyst: {
+    name: "Améthyst",
+    color: "bg-purple-bg",
+    textColor: "text-purple-bg",
+    border: "border-purple-border",
+  },
+  corail: {
+    name: "Corail",
+    color: "bg-orange-bg",
+    textColor: "text-orange-bg",
+    border: "border-orange-border",
+  },
+  emerald: {
+    name: "Emerald",
+    color: "bg-green-bg",
+    textColor: "text-green-bg",
+    border: "border-green-border",
+  },
 };
 
 const SCREEN_IMAGES = {
@@ -90,6 +115,10 @@ export default function Hero() {
     setCurrentTheme(theme);
   };
 
+  const getThemeBorder = (): string => {
+    return THEMES[currentTheme as ThemeKey]?.border || "border-blue-border";
+  };
+
   return (
     <div className="s:gap-20 flex flex-col relative gap-4 items-center justify-center pt-14 overflow-hidden bg-gradient-to-b from-[#f3f7ff] to-[#deebfe]">
       <div className="flex flex-col items-center justify-center gap-8 z-2 px-[5%]">
@@ -138,21 +167,21 @@ export default function Hero() {
           alt="Mockup de l'application"
           width={218}
           height={472}
-          className="sm:left-[100px] s:left-[50px] s:scale-100 scale-90 absolute left-[25px] top-24 z-6 border-8 border-blue-200 rounded-3xl shadow"
+          className={`sm:left-[100px] s:left-[50px] s:scale-100 scale-90 absolute left-[25px] top-24 z-6 border-8 rounded-3xl shadow ${getThemeBorder()}`}
         />
         <Image
           src={`${getScreenImage("accueil")}?v=${Date.now()}`}
           alt="Mockup de l'application"
           width={276}
           height={472}
-          className="s:scale-100 scale-90 absolute left-1/2 transform -translate-x-1/2 top-0 z-7 border-8 border-blue-200 rounded-3xl shadow"
+          className={`s:scale-100 scale-90 absolute left-1/2 transform -translate-x-1/2 top-0 z-7 border-8 rounded-3xl shadow ${getThemeBorder()}`}
         />
         <Image
           src={`${getScreenImage("agenda")}?v=${Date.now()}`}
           alt="Mockup de l'application"
           width={218}
           height={472}
-          className="sm:right-[100px] s:right-[50px] s:scale-100  scale-90 absolute right-[25px] top-24 z-6 border-8 border-blue-200 rounded-3xl shadow"
+          className={`sm:right-[100px] s:right-[50px] s:scale-100 scale-90 absolute right-[25px] top-24 z-6 border-8 rounded-3xl shadow ${getThemeBorder()}`}
         />
         <div className="lg:block hidden absolute right-[150px] top-10 z-5 rotate-[-12deg]">
           <div className="relative flex justify-between items-center gap-4 bg-white p-4 rounded-lg w-[300px]">
