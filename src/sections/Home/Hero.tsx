@@ -155,7 +155,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="flex items-center justify-center relative h-[400px]">
-        <div className="absolute flex flex-col justify-center items-center bottom-2 left-1/2 transform -translate-x-1/2 z-9">
+        <div className="md:flex absolute hidden flex-col justify-center items-center bottom-2 left-1/2 transform -translate-x-1/2 z-9">
           <Mouse strokeWidth={1.75} className="text-blue-900" />
           <p className="text-xs font-medium font-host-grotesk text-center text-blue-900">
             Scroll
