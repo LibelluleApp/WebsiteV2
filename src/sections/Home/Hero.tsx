@@ -91,33 +91,35 @@ export default function Hero() {
   };
 
   return (
-    <div className="flex flex-col relative gap-20 items-center justify-center pt-14 overflow-hidden bg-gradient-to-b from-[#f3f7ff] to-[#deebfe]">
-      <div className="flex flex-col items-center justify-center gap-8 z-2">
-        <div className="flex flex-col items-center gap-1">
-          <h2 className="text-4xl font-host-grotesk text-blue-900 font-extrabold">
+    <div className="s:gap-20 flex flex-col relative gap-4 items-center justify-center pt-14 overflow-hidden bg-gradient-to-b from-[#f3f7ff] to-[#deebfe]">
+      <div className="flex flex-col items-center justify-center gap-8 z-2 px-[5%]">
+        <div className="md:items-center flex flex-col items-start gap-2">
+          <h2 className="s:text-4xl md:text-center text-3xl text-start font-host-grotesk text-blue-900 font-extrabold">
             Votre vie universitaire dans votre smartphone 📱
           </h2>
-          <h3 className="text-xl text-center text-grey font-outfit w-[700px]">
+          <h3 className="s:text-xl md:text-center text-lg text-start text-grey font-outfit max-w-[700px]">
             Libellule a été imaginée par des étudiants de l’IUT d’Angoulême pour
             regrouper tous les services de l’université de Poitiers.
           </h3>
         </div>
-        <div className="flex flex-col items-center gap-2">
-          <div className="flex gap-4">
+        <div className="md:items-center flex flex-col items-start gap-2 w-full">
+          <div className="s:gap-4 flex gap-2">
             <Image
               src="/playstore.svg"
               alt="Bouton Play Store"
               width={135}
               height={40}
+              className="s:scale-100 scale-90"
             />
             <Image
               src="/appstore.svg"
               alt="Bouton App Store"
               width={135}
               height={40}
+              className="s:scale-100 scale-90"
             />
           </div>
-          <p className="text-grey text-center font-outfit text-xs">
+          <p className="md:text-center text-grey text-start font-outfit text-xs">
             En téléchargeant l’app, vous acceptez les 
             <Link href="">conditions générales d’utilisation</Link>
           </p>
@@ -136,23 +138,23 @@ export default function Hero() {
           alt="Mockup de l'application"
           width={218}
           height={472}
-          className="absolute left-[100px] top-24 z-6 border-8 border-blue-200 rounded-3xl shadow"
+          className="sm:left-[100px] s:left-[50px] s:scale-100 scale-90 absolute left-[25px] top-24 z-6 border-8 border-blue-200 rounded-3xl shadow"
         />
         <Image
           src={`${getScreenImage("accueil")}?v=${Date.now()}`}
           alt="Mockup de l'application"
           width={276}
-          height={600}
-          className="absolute left-1/2 transform -translate-x-1/2 top-0 z-7 border-8 border-blue-200 rounded-3xl shadow"
+          height={472}
+          className="s:scale-100 scale-90 absolute left-1/2 transform -translate-x-1/2 top-0 z-7 border-8 border-blue-200 rounded-3xl shadow"
         />
         <Image
           src={`${getScreenImage("agenda")}?v=${Date.now()}`}
           alt="Mockup de l'application"
           width={218}
           height={472}
-          className="absolute right-[100px] top-24 z-6 border-8 border-blue-200 rounded-3xl shadow"
+          className="sm:right-[100px] s:right-[50px] s:scale-100  scale-90 absolute right-[25px] top-24 z-6 border-8 border-blue-200 rounded-3xl shadow"
         />
-        <div className="absolute right-[150px] top-10 z-5 rotate-[-12deg]">
+        <div className="lg:block hidden absolute right-[150px] top-10 z-5 rotate-[-12deg]">
           <div className="relative flex justify-between items-center gap-4 bg-white p-4 rounded-lg w-[300px]">
             <div className="flex gap-2 items-center">
               <div className="bg-blue-900 p-2 rounded-lg">
@@ -174,7 +176,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="absolute left-[160px] top-0 z-5 rotate-[12deg]">
+        <div className="lg:block xl:left-[150px] xl:top-0 hidden absolute left-[120px] top-[-10px] z-5 rotate-[12deg]">
           <div className="relative flex flex-col justify-center items-start gap-3 bg-white p-4 rounded-lg">
             <div className="flex gap-2 items-center">
               <div className="bg-blue-900 p-2 rounded-lg">
@@ -208,7 +210,7 @@ export default function Hero() {
                 </motion.button>
               ))}
             </div>
-            <div className="absolute top-[-40px] right-0 flex flex-col items-start">
+            <div className="xl:right-0 absolute top-[-40px] right-4 flex flex-col items-start">
               <p className="font-gochi-hand text-grey text-lg">
                 Personnalise ton app !
               </p>
