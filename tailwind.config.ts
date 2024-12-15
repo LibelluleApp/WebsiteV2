@@ -13,6 +13,7 @@ export default {
         "host-grotesk": ["var(--font-host-grotesk)", "sans-serif"],
         outfit: ["var(--font-outfit)", "sans-serif"],
         ubuntu: ["var(--font-ubuntu)", "sans-serif"],
+        "gochi-hand": ["var(--font-gochi-hand)", "cursive"],
       },
       letterSpacing: {
         // Vos espacements personnalisés
@@ -21,6 +22,18 @@ export default {
       height: {
         // Vos hauteurs personnalisées
         0.5: "0.03125rem",
+      },
+      zIndex: {
+        // Vos z-index personnalisés
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
       },
       colors: {
         blue: {
@@ -36,6 +49,11 @@ export default {
           900: "var(--blue-ribbon-900)",
           950: "var(--blue-ribbon-950)",
         },
+        pink: "#831843",
+        purple: "#4C1D95",
+        orange: "#78350F",
+        green: "#14532D",
+        grey: "#87A6DD",
       },
     },
   },

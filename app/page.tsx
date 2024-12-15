@@ -1,7 +1,9 @@
+import Hero from "@/src/sections/Home/Hero";
+
 export default function Home() {
   return (
-    <div className="font-outfit h-full">
-      <p className="font-host-grotesk">Main</p>
+    <div className="md:pt-[56px] pt-[55px]">
+      <Hero />
     </div>
   );
 }

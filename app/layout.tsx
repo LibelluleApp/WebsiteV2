@@ -1,7 +1,18 @@
 import type { Metadata } from "next";
-import { Host_Grotesk, Outfit, Ubuntu_Sans } from "next/font/google";
+import {
+  Host_Grotesk,
+  Outfit,
+  Ubuntu_Sans,
+  Gochi_Hand,
+} from "next/font/google";
 import "./globals.css";
 import Header from "@/src/components/header";
+
+const gochiHand = Gochi_Hand({
+  variable: "--font-gochi-hand",
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const ubuntu = Ubuntu_Sans({
   variable: "--font-ubuntu",
@@ -31,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="h-full">
       <body
-        className={`${outfit.variable} ${hostGrotesk.variable} ${ubuntu.variable} antialiased h-full font-outfit`}
+        className={`${outfit.variable} ${hostGrotesk.variable} ${ubuntu.variable} ${gochiHand.variable} antialiased h-full font-outfit`}
       >
         <Header />
         {children}

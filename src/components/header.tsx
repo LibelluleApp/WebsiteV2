@@ -16,7 +16,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="relative">
+    <header className="fixed top-0 left-0 w-full z-30">
       {/* Version desktop */}
       <div className="hidden md:flex justify-between items-center px-8 bg-white shadow">
         <Link href="/" className="flex items-center gap-[9px]">
