@@ -133,34 +133,50 @@ export default function Hero() {
         </div>
         <div className="md:items-center flex flex-col items-start gap-2 w-full">
           <div className="s:gap-4 flex gap-2">
-            <Image
-              src="/playstore.svg"
-              alt="Bouton Play Store"
-              width={135}
-              height={40}
-              className="s:scale-100 scale-90"
-            />
-            <Image
-              src="/appstore.svg"
-              alt="Bouton App Store"
-              width={135}
-              height={40}
-              className="s:scale-100 scale-90"
-            />
+            <motion.div whileTap={{ scale: 0.9 }}>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.libellule.libellule"
+                target="_blank"
+              >
+                <Image
+                  src="/playstore.svg"
+                  alt="Bouton Play Store"
+                  width={135}
+                  height={40}
+                  className="s:scale-100 scale-90"
+                />
+              </Link>
+            </motion.div>
+            <motion.div whileTap={{ scale: 0.8 }}>
+              <Link
+                href="https://apps.apple.com/fr/app/libelluleapp/id6502843331"
+                target="_blank"
+              >
+                <Image
+                  src="/appstore.svg"
+                  alt="Bouton App Store"
+                  width={135}
+                  height={40}
+                  className="s:scale-100 scale-90"
+                />
+              </Link>
+            </motion.div>
           </div>
           <p className="md:text-center text-grey text-start font-outfit text-xs">
             En téléchargeant l’app, vous acceptez les 
-            <Link href="">conditions générales d’utilisation</Link>
+            <Link href="/cgu" className="underline">
+              conditions générales d’utilisation
+            </Link>
           </p>
         </div>
       </div>
       <div className="sm:h-[400px] flex items-center justify-center relative h-[500px]">
-        <div className="md:flex absolute hidden flex-col justify-center items-center bottom-2 left-1/2 transform -translate-x-1/2 z-9">
+        {/* <div className="md:flex absolute hidden flex-col justify-center items-center bottom-2 left-1/2 transform -translate-x-1/2 z-9">
           <Mouse strokeWidth={1.75} className="text-blue-900" />
           <p className="text-xs font-medium font-host-grotesk text-center text-blue-900">
             Scroll
           </p>
-        </div>
+        </div> */}
         <div className="sm:h-[300px] sm:from-0% absolute bottom-0 h-[475px] w-[100vw] bg-gradient-to-t from-[#f3f7ff] from-40% to-[#f3f8ff00] z-8 pointer-events-none"></div>
         <Image
           src={`${getScreenImage("emploi_du_temps")}?v=${Date.now()}`}
@@ -183,7 +199,7 @@ export default function Hero() {
           height={472}
           className={`sm:right-[100px] s:right-[50px] s:scale-100 scale-90 absolute right-[25px] top-24 z-6 border-8 rounded-3xl shadow ${getThemeBorder()}`}
         />
-        <div className="xs:right-[-60px] xs:bottom-40 s:right-[0px] s:bottom-36 s:scale-90 s:rotate-[-10deg] sm:scale-100 sm:right-[10px] sm:top-[-10px] sm:rotate-[-12deg] md:right-[80px] md:top-8 md:z-7 lg:z-5 lg:right-[120px] lg:top-10 lg:scale-100 absolute right-[-100px] bottom-44 z-9 rotate-[-10deg] scale-90">
+        <div className="xs:right-[-60px] xs:bottom-40 s:right-[0px] s:bottom-36 s:scale-90 s:rotate-[-10deg] sm:scale-95 sm:right-[10px] sm:top-[-10px] sm:rotate-[-12deg] md:right-[80px] md:top-8 md:z-7 lg:z-5 lg:right-[140px] lg:top-10 lg:scale-100 absolute right-[-100px] bottom-44 z-9 rotate-[-10deg] scale-90">
           <div className="relative flex justify-between items-center gap-4 bg-white p-4 rounded-lg w-[300px]">
             <div className="flex gap-2 items-center">
               <div className="bg-blue-900 p-2 rounded-lg">
@@ -205,7 +221,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="xs:left-[-145px] s:left-[-90px] sm:left-[-70px] sm:top-[-60px] sm:rotate-[12deg] md:left-[0px] md:top-[-30px] lg:left-[120px] lg:top-[-10px] lg:z-5 lg:scale-100 xl:left-[150px] xl:top-0 absolute left-[-170px] bottom-2 scale-90 z-9 rotate-[10deg]">
+        <div className="xs:left-[-145px] s:left-[-90px] sm:left-[-70px] sm:top-[-60px] sm:rotate-[12deg] md:left-[0px] md:top-[-30px] lg:left-[120px] lg:top-[-10px] lg:z-5 lg:scale-95 xl:left-[120px] xl:top-[-10px] absolute left-[-170px] bottom-2 scale-90 z-9 rotate-[10deg]">
           <div className="relative flex flex-col justify-center items-start gap-3 bg-white p-4 rounded-lg">
             <div className="flex gap-2 items-center">
               <div className="bg-blue-900 p-2 rounded-lg">

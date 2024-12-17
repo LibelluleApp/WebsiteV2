@@ -53,12 +53,22 @@ export default function Header() {
           </ul>
         </nav>
         <div className="flex gap-4">
-          <Link href="https://www.instagram.com/libellule/">
-            <Instagram className="text-blue-700" />
-          </Link>
-          <Link href="https://www.linkedin.com/company/libelluleapp/">
-            <Linkedin className="text-blue-700" />
-          </Link>
+          <motion.div whileTap={{ scale: 0.8 }}>
+            <Link
+              href="https://www.instagram.com/libelluleapp/"
+              target="_blank"
+            >
+              <Instagram strokeWidth={1.75} className="text-blue-700" />
+            </Link>
+          </motion.div>
+          <motion.div whileTap={{ scale: 0.8 }}>
+            <Link
+              href="https://www.linkedin.com/company/libelluleapp/"
+              target="_blank"
+            >
+              <Linkedin strokeWidth={1.75} className="text-blue-700" />
+            </Link>
+          </motion.div>
         </div>
       </div>
 
