@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Mouse, Lightbulb, Palette } from "lucide-react";
+import { Lightbulb, Palette } from "lucide-react";
 import Switcher from "@/src/components/switch";
 import { useState } from "react";
 import { motion } from "framer-motion";
