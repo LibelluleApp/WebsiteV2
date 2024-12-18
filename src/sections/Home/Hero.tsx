@@ -120,7 +120,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="s:gap-20 flex flex-col relative gap-4 items-center justify-center pt-14 overflow-hidden bg-gradient-to-b from-[#f3f7ff] to-[#deebfe]">
+    <section className="s:gap-20 md:pt-[112px] flex flex-col relative gap-4 items-center justify-center pt-[111px] overflow-hidden bg-gradient-to-b from-[#f3f7ff] to-[#deebfe]">
       <div className="flex flex-col items-center justify-center gap-8 z-2 px-[5%]">
         <div className="md:items-center flex flex-col items-start gap-2">
           <h2 className="s:text-4xl md:text-center text-3xl text-start font-host-grotesk text-blue-900 font-extrabold">
