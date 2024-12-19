@@ -1,112 +1,134 @@
 "use client";
+import Card from "@/src/components/card";
 
 export default function Bento() {
   return (
-    <section>
-      <div className="bg-gray-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-          <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-            <div className="relative lg:row-span-2">
-              <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
-              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-                <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                    Mobile friendly
-                  </p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                    qui lorem cupidatat commodo.
-                  </p>
-                </div>
-                <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
-                  <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                    <img
-                      className="size-full object-cover object-top"
-                      src="https://tailwindui.com/plus/img/component-images/bento-03-mobile-friendly.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
-            </div>
-            <div className="relative max-lg:row-start-1">
-              <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
-              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-                <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                    Performance
-                  </p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit
-                    maiores impedit.
-                  </p>
-                </div>
-                <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-                  <img
-                    className="w-full max-lg:max-w-xs"
-                    src="https://tailwindui.com/plus/img/component-images/bento-03-performance.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
-            </div>
-            <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-              <div className="absolute inset-px rounded-lg bg-white"></div>
-              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-                <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                    Security
-                  </p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Morbi viverra dui mi arcu sed. Tellus semper adipiscing
-                    suspendisse semper morbi.
-                  </p>
-                </div>
-                <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
-                  <img
-                    className="h-[min(152px,40cqw)] object-cover"
-                    src="https://tailwindui.com/plus/img/component-images/bento-03-security.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
-            </div>
-            <div className="relative lg:row-span-2">
-              <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-                <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                    Powerful APIs
-                  </p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Sit quis amet rutrum tellus ullamcorper ultricies libero
-                    dolor eget sem sodales gravida.
-                  </p>
-                </div>
-                <div className="relative min-h-[30rem] w-full grow">
-                  <div className="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
-                    <div className="flex bg-gray-800/40 ring-1 ring-white/5">
-                      <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
-                        <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                          NotificationSetting.jsx
-                        </div>
-                        <div className="border-r border-gray-600/10 px-4 py-2">
-                          App.jsx
-                        </div>
-                      </div>
-                    </div>
-                    <div className="px-6 pb-14 pt-6">
-                      {/* Your code example */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-            </div>
-          </div>
+    <section className="flex flex-col gap-10 mt-20 w-[90%] mx-auto">
+      <div>
+        <p className="text-blue-900 text-2xl font-semibold font-host-grotesk">
+          Une{" "}
+          <span className="text-blue-900 text-2xl font-extrabold font-host-grotesk">
+            seule application
+          </span>{" "}
+          pour répondre à{" "}
+          <span className="text-blue-900 text-2xl font-extrabold font-host-grotesk">
+            vos besoins
+          </span>
+        </p>
+        <p className="text-grey text-lg font-normal font-outfit">
+          Découvrez les fonctionnalités qui vont simplifier votre vie étudiante.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2">
+        <div className="col-start-1 row-start-1 md:col-start-1 md:row-start-1 md:col-span-1 md:row-span-1 h-fit">
+          <Card
+            name={"Emploi du temps"}
+            description={
+              <p className="text-blue-800 text-lg font-normal">
+                <span className="text-blue-800 text-lg font-semibold">
+                  Ne perdez plus de temps
+                </span>{" "}
+                à vous connecter sur UPPlanning ou à installer TimeCalendar.
+              </p>
+            }
+            alignCenter={true}
+            btn={false}
+            img={[
+              "/screens/themes/Blue/Light/Emploi_du_temps.png",
+              "/screens/themes/Blue/Light/Emploi_du_temps.png",
+            ]}
+            alt={["Mockup de l'application", "Mockup de l'application"]}
+            size={"lg"}
+          />
+        </div>
+        <div className="col-start-1 row-start-2 md:col-start-2 md:row-start-1 md:col-span-2 md:row-span-1 h-fit">
+          <Card
+            name={"Devoirs"}
+            description={
+              <p className="text-blue-800 text-lg font-normal">
+                Liste de{" "}
+                <span className="text-blue-800 text-lg font-semibold">
+                  vos devoirs à faire
+                </span>{" "}
+                et{" "}
+                <span className="text-blue-800 text-lg font-semibold">
+                  vos évaluations
+                </span>{" "}
+                en commun avec votre groupe de classe.
+              </p>
+            }
+            alignCenter={true}
+            btn={"En savoir plus"}
+            img={[
+              "/screens/themes/Blue/Light/Agenda.png",
+              "/screens/themes/Blue/Light/Agenda.png",
+            ]}
+            alt={["Mockup de l'application", "Mockup de l'application"]}
+            size={"xl"}
+          />
+        </div>
+        <div className="col-start-1 row-start-3 md:col-start-1 md:row-start-2 md:col-span-1 md:row-span-1 h-fit">
+          <Card
+            name={"Mails"}
+            description={
+              <p className="text-blue-800 text-lg font-normal">
+                <span className="text-blue-800 text-lg font-semibold">
+                  Ne passez plus à côté
+                </span>{" "}
+                de vos mails étudiants.
+              </p>
+            }
+            alignCenter={false}
+            btn={false}
+            img={[
+              "/screens/themes/Blue/Light/Mails.png",
+              "/screens/themes/Blue/Light/Mails.png",
+            ]}
+            alt={["Mockup de l'application", "Mockup de l'application"]}
+            size={"md"}
+          />
+        </div>
+        <div className="col-start-1 row-start-4 md:col-start-2 md:row-start-2 md:col-span-1 md:row-span-1 h-fit">
+          <Card
+            name={"Menu du Crousty"}
+            description={
+              <p className="text-blue-800 text-lg font-normal">
+                Soyez au courant du{" "}
+                <span className="text-blue-800 text-lg font-semibold">
+                  menu du midi.
+                </span>{" "}
+              </p>
+            }
+            alignCenter={false}
+            btn={false}
+            img={[
+              "/screens/themes/Blue/Light/Restauration.png",
+              "/screens/themes/Blue/Light/Restauration.png",
+            ]}
+            alt={["Mockup de l'application", "Mockup de l'application"]}
+            size={"md"}
+          />
+        </div>
+        <div className="col-start-1 row-start-5 md:col-start-3 md:row-start-2 md:col-span-1 md:row-span-1 h-fit">
+          <Card
+            name={"Personnalisation"}
+            description={
+              <p className="text-blue-800 text-lg font-normal">
+                Faites de Libellule, une application qui vous{" "}
+                <span className="text-blue-800 text-lg font-semibold">
+                  ressemble.
+                </span>{" "}
+              </p>
+            }
+            alignCenter={false}
+            btn={false}
+            img={[
+              "/screens/themes/Blue/Light/Paramètres.png",
+              "/screens/themes/Blue/Light/Couleurs.png",
+            ]}
+            alt={["Mockup de l'application", "Mockup de l'application"]}
+            size={"md"}
+          />
         </div>
       </div>
     </section>

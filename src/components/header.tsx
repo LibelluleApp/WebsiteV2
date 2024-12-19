@@ -14,6 +14,7 @@ export default function Header() {
   };
 
   const pathname = usePathname();
+  console.log(pathname);
 
   return (
     <header className="fixed top-0 left-0 w-full z-30">

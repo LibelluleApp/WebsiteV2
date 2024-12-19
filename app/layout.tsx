@@ -40,12 +40,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="h-full">
+    <html lang="fr">
       <body
         className={`${outfit.variable} ${hostGrotesk.variable} ${ubuntu.variable} ${gochiHand.variable} antialiased h-full font-outfit`}
       >
         <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
