@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 interface CardProps {
@@ -5,7 +6,7 @@ interface CardProps {
   description: React.ReactNode;
   alignCenter: boolean;
   btn: string | false;
-  img: string[];
+  screens: [string?, string?, string?][]; // Tableau avec URL, x, et y
   alt: string[];
   size: "md" | "lg" | "xl";
 }
@@ -15,7 +16,7 @@ export default function Card({
   description,
   alignCenter,
   btn,
-  img,
+  screens,
   alt,
   size,
 }: CardProps) {
@@ -38,34 +39,48 @@ export default function Card({
         <div className="text-wrap">{description}</div>
         {btn !== false && (
           <div className="mt-4">
-            <button className="w-fit bg-blue-700 text-blue-50 py-2 px-12 rounded-xl font-medium">
+            <button className="w-fit bg-blue-700 text-blue-50 py-2 px-10 rounded-xl font-medium">
               {btn}
             </button>
           </div>
         )}
       </div>
       <div
-        className={`relative w-full mt-4 z-4 ${
+        className={`relative w-full z-4 ${
           size === "md" ? "h-[200px]" : "h-[300px]"
         }`}
       >
-        <Image
-          src={img[0]}
-          alt={alt[0]}
-          width={250}
-          height={472}
-          className="s:scale-100 scale-90 absolute right-8 transform top-10 border-8 rounded-3xl shadow border-blue-200"
-        />
-        <Image
-          src={img[1]}
-          alt={alt[1]}
-          width={250}
-          height={472}
-          className="s:scale-100 scale-90 absolute right-[-70px] transform top-0 border-8 rounded-3xl shadow border-blue-200"
-        />
+        {screens.map(([src, top, right], index) => {
+          // Vérifier si `src` est vide
+          if (!src) return null;
+
+          return (
+            <div
+              key={index}
+              style={{
+                position: "absolute",
+              }}
+              className={`w-fit h-fit ${top || ""} ${right || ""}`} // Classes utilitaires comme `bottom-[-90px]`
+            >
+              <Image
+                src={src}
+                alt={alt[index] || "Image"}
+                width={250}
+                height={472}
+                className="lg:scale-100 scale-90 transform border-8 rounded-3xl shadow border-blue-200"
+              />
+            </div>
+          );
+        })}
       </div>
 
-      <div className="absolute top-0 h-full w-full bg-gradient-to-tr from-[#edf8ff] from-30% to-[#edf8ff00] z-4"></div>
+      <div
+        className={`absolute top-0 h-full w-full ${
+          alignCenter === true
+            ? "bg-gradient-to-r from-50%"
+            : "bg-gradient-to-tr from-30%"
+        } from-[#edf8ff] to-[#edf8ff00] z-4`}
+      ></div>
     </div>
   );
 }

@@ -31,6 +31,10 @@ export default {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      maxWidth: {
+        "8xl": "96rem",
+        "9xl": "108rem",
+      },
       fontFamily: {
         "host-grotesk": ["var(--font-host-grotesk)", "sans-serif"],
         outfit: ["var(--font-outfit)", "sans-serif"],
