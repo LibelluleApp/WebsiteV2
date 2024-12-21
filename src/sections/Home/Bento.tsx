@@ -1,5 +1,5 @@
 "use client";
-import Card from "@/src/components/card";
+import Card from "@/src/components/cardBento";
 
 export default function BentoSection() {
   return (
