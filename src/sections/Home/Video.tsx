@@ -17,7 +17,7 @@ export default function VideoSection() {
   // };
 
   return (
-    <section className="flex flex-col gap-10 w-[90%] mx-auto max-w-9xl mt-20 overflow-hidden">
+    <section className="flex flex-col gap-10 w-[90%] mx-auto max-w-9xl overflow-hidden">
       <TitleSection
         title={
           <p className="text-blue-900 text-2xl font-semibold font-host-grotesk">

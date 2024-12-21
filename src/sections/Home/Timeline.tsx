@@ -8,7 +8,7 @@ import { Linkedin, Instagram, Globe } from "lucide-react";
 
 export default function TimelineSection() {
   return (
-    <section className="mt-20 overflow-hidden">
+    <section className="overflow-hidden">
       <div className="flex flex-col gap-10 w-[90%] mx-auto max-w-9xl">
         <div>
           <p className="text-blue-900 text-2xl font-semibold font-host-grotesk">

@@ -5,7 +5,6 @@ interface LearnMoreButtonProps {
 
 export const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({
   sectionIndex,
-  className = "px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600",
 }) => {
   const handleClick = () => {
     // Déclencher l'événement personnalisé
@@ -16,7 +15,10 @@ export const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({
   };
 
   return (
-    <button onClick={handleClick} className={className}>
+    <button
+      onClick={handleClick}
+      className="px-10 py-2 bg-blue-700 text-blue-50 rounded-lg font-medium"
+    >
       En savoir plus
     </button>
   );

@@ -8,10 +8,12 @@ export default function Home() {
   return (
     <div className="">
       <HeroSection />
-      <BentoSection />
-      <TimelineSection />
-      <FAQ />
-      <VideoSection />
+      <div className="flex flex-col gap-40">
+        <BentoSection />
+        <TimelineSection />
+        <FAQ />
+        <VideoSection />
+      </div>
     </div>
   );
 }
