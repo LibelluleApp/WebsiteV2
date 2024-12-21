@@ -97,7 +97,7 @@ const SCREEN_IMAGES = {
   },
 };
 
-export default function Hero() {
+export default function HeroSection() {
   const [darkMode, setDarkMode] = useState(false);
   const [currentTheme, setCurrentTheme] = useState("azure");
 

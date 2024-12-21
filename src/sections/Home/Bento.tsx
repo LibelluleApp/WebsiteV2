@@ -1,7 +1,7 @@
 "use client";
 import Card from "@/src/components/card";
 
-export default function Bento() {
+export default function BentoSection() {
   return (
     <section className="flex flex-col gap-10 mt-20 w-[90%] mx-auto max-w-9xl">
       <div>

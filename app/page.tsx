@@ -1,11 +1,13 @@
-import Bento from "@/src/sections/Home/Bento";
-import Hero from "@/src/sections/Home/Hero";
+import BentoSection from "@/src/sections/Home/Bento";
+import HeroSection from "@/src/sections/Home/Hero";
+import TimelineSection from "@/src/sections/Home/Timeline";
 
 export default function Home() {
   return (
     <div className="">
-      <Hero />
-      <Bento />
+      <HeroSection />
+      <BentoSection />
+      <TimelineSection />
     </div>
   );
 }

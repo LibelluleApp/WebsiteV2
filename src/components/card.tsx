@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Tag from "./tag";
 
 interface CardProps {
   name: string;
@@ -31,11 +32,7 @@ export default function Card({
           alignCenter === true ? "top-1/2 -translate-y-1/2" : "bottom-0 left-0"
         } p-6 z-5`}
       >
-        <div className="w-fit py-1 px-4 rounded-[56px] border border-grey">
-          <p className="text-center text-grey text-sm font-medium font-host-grotesk">
-            {name}
-          </p>
-        </div>
+        <Tag name={name} icon={false} alt="" />
         <div className="text-wrap">{description}</div>
         {btn !== false && (
           <div className="mt-4">
