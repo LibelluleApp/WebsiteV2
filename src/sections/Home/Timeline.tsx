@@ -86,7 +86,7 @@ export default function TimelineSection() {
             </div>
           </div>
           <div className="md:h-[430px] lg:items-stretch lg:w-[1000px] lg:h-auto h-[400px] relative w-full items-center">
-            <div className="md:w-[600px] lg:w-[500px] absolute w-[500px] md:h-[430px] lg:h-[400px] h-[400px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 flex justify-between items-center">
+            <div className="s:w-[500px] md:w-[600px] lg:w-[500px] md:h-[430px] lg:h-[400px] absolute w-[480px] h-[400px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 flex justify-between items-center">
               <div className="s:right-64 s:top-0 s:scale-100 md:w-80 md:h-72 lg:w-60 lg:h-72 scale-90 right-56 top-0 absolute w-60 h-72 z-6 rotate-[-10deg]">
                 <Image
                   src="/rapahel_tiphonet.png"
