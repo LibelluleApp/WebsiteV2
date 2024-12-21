@@ -32,12 +32,12 @@ export default function TimelineSection() {
                   alt="Logo en forme de L"
                 />
                 <div className="flex flex-col gap-2 mb-10">
-                  <p className="text-blue-800 text-lg font-normal leading-[27px]">
+                  <p className="text-blue-800 text-base font-normal leading-[27px]">
                     Après la réussite de MMI Companion, nous avons réalisé que
                     notre projet pouvait répondre à{" "}
                     <span className="font-semibold">un besoin plus large</span>.
                   </p>
-                  <p className="text-blue-800 text-lg font-normal leading-[27px]">
+                  <p className="text-blue-800 text-base font-normal leading-[27px]">
                     Nous avons donc imaginé{" "}
                     <span className="font-semibold">Libellule</span> avec le
                     même objectif qui est de rendre la vie étudiante à
@@ -62,14 +62,14 @@ export default function TimelineSection() {
                   alt="Logo en forme de M de trois couleurs différentes"
                 />
                 <div className="flex flex-col gap-2">
-                  <p className="text-blue-800 text-lg font-normal leading-[27px]">
+                  <p className="text-blue-800 text-base font-normal leading-[27px]">
                     Après notre première année en MMI, nous avons pu nous rendre
                     compte du{" "}
                     <span className="font-semibold">manque de simplicité</span>{" "}
                     et de <span className="font-semibold">modernité</span> des
                     outils de l’université de Poitiers.
                   </p>
-                  <p className="text-blue-800 text-lg font-normal leading-[27px]">
+                  <p className="text-blue-800 text-base font-normal leading-[27px]">
                     Nous avons donc imaginé et développé une première
                     application qui se nommait{" "}
                     <span className="font-semibold">MMI Companion</span> et qui

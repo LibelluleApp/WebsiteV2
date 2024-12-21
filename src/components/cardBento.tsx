@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Tag from "./tag";
+import { LearnMoreButton } from "@/src/components/FAQBtn";
 
 interface CardProps {
   name: string;
@@ -36,9 +37,7 @@ export default function Card({
         <div className="text-wrap">{description}</div>
         {btn !== false && (
           <div className="mt-4">
-            <button className="w-fit bg-blue-700 text-blue-50 py-2 px-10 rounded-xl font-medium">
-              {btn}
-            </button>
+            <LearnMoreButton sectionIndex={1} />
           </div>
         )}
       </div>
