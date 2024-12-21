@@ -159,7 +159,7 @@ export const FAQ: React.FC<FAQProps> = ({ initialOpenIndex = null }) => {
 
   return (
     <section
-      className="flex gap-20 mt-20 w-[90%] mx-auto max-w-9xl"
+      className="lg:flex-row lg:gap-20 flex flex-col gap-8 mt-20 w-[90%] mx-auto max-w-9xl"
       ref={faqRef}
       data-faq
     >

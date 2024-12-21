@@ -41,7 +41,7 @@ export const Accordion: React.FC<AccordionProps> = ({
                   <Plus className="h-5 w-5 text-grey" />
                 )}
               </motion.div>
-              <span className="font-medium text-blue-900 text-lg">
+              <span className="text-left font-medium text-blue-900 text-lg">
                 {item.title}
               </span>
             </div>
