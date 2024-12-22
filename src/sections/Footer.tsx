@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="lg:py-24 s:px-12 w-full mx-auto py-20 px-8">
-      <div className="flex flex-col gap-20 max-w-9xl mx-auto">
+    <footer className="lg:py-24 w-full mx-auto py-20">
+      <div className="flex flex-col gap-20 max-w-9xl w-[90%] mx-auto">
         <div className="grid grid-col-1 md:grid-cols-3 gap-10 md:grid-rows-2 lg:grid-cols-5 lg:grid-rows-1">
           <div className="col-start-1 row-start-1 row-span-1 md:col-span-3 lg:col-span-2 lg:row-span-1 lg:col-start-1 flex flex-col gap-4">
             <div className="flex gap-2 items-center">

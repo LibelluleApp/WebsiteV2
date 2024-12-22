@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 export default function InstallApp() {
   return (
-    <section className="s:y-14 s:px-12 flex flex-col gap-10 w-full bg-background py-10 px-8 overflow-hidden">
-      <div className="md:items-stretch md:flex-row md:gap-20 md:h-96 xl:gap-40 flex flex-col gap-14 max-w-9xl mx-auto h-[675px] items-center">
+    <section className="s:y-14 flex flex-col gap-10 w-full bg-background py-10 overflow-hidden">
+      <div className="md:items-stretch md:flex-row md:gap-20 md:h-96 xl:gap-40 flex flex-col gap-14 w-[90%] max-w-9xl mx-auto h-[675px] items-center">
         <div className="md:gap-10 flex flex-col gap-6 items-center justify-center">
           <div className="flex flex-col gap-1">
             <p className="lg:text-3xl text-blue-900 text-2xl font-semibold font-host-grotesk">
