@@ -179,27 +179,60 @@ export default function HeroSection() {
           </p>
         </div> */}
         <div className="sm:h-[300px] sm:from-0% absolute bottom-0 h-[475px] w-[100vw] bg-gradient-to-t from-[#f3f7ff] from-40% to-[#f3f8ff00] z-8 pointer-events-none"></div>
-        <Image
-          src={getScreenImage("emploi_du_temps")}
-          alt="Mockup de l'application"
-          width={218}
-          height={472}
-          className={`sm:left-[100px] s:left-[50px] s:scale-100 scale-90 absolute left-[25px] top-24 z-6 border-8 rounded-3xl shadow ${getThemeBorder()}`}
-        />
-        <Image
-          src={getScreenImage("accueil")}
-          alt="Mockup de l'application"
-          width={276}
-          height={472}
-          className={`s:scale-100 scale-90 absolute left-1/2 transform -translate-x-1/2 top-0 z-7 border-8 rounded-3xl shadow ${getThemeBorder()}`}
-        />
-        <Image
-          src={getScreenImage("agenda")}
-          alt="Mockup de l'application"
-          width={218}
-          height={472}
-          className={`sm:right-[100px] s:right-[50px] s:scale-100 scale-90 absolute right-[25px] top-24 z-6 border-8 rounded-3xl shadow ${getThemeBorder()}`}
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} // Initial state
+          animate={{ opacity: 1, y: 0 }} // Final state
+          transition={{
+            type: "spring",
+            bounce: 0.4,
+            duration: 0.8,
+            delay: 0.2,
+          }} // Durée de l'animation
+          className="sm:left-[100px] s:left-[50px] absolute left-[25px] top-24 z-6"
+        >
+          <Image
+            src={getScreenImage("emploi_du_temps")}
+            alt="Mockup de l'application"
+            width={218}
+            height={472}
+            className={`s:scale-100 scale-90 border-8 rounded-3xl shadow ${getThemeBorder()}`}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} // Initial state
+          animate={{ opacity: 1, y: 0 }} // Final state
+          transition={{ type: "spring", bounce: 0.4, duration: 0.8, delay: 0 }} // Durée de l'animation
+          className="absolute left-1/2 top-0 z-7"
+        >
+          <Image
+            src={getScreenImage("accueil")}
+            alt="Mockup de l'application"
+            width={276}
+            height={472}
+            className={`s:scale-100 scale-90 border-8 transform -translate-x-1/2 rounded-3xl shadow ${getThemeBorder()}`}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} // Initial state
+          animate={{ opacity: 1, y: 0 }} // Final state
+          transition={{
+            type: "spring",
+            bounce: 0.4,
+            duration: 0.8,
+            delay: 0.1,
+          }} // Durée de l'animation
+          className="sm:right-[100px] s:right-[50px] absolute right-[25px] top-24 z-6"
+        >
+          <Image
+            src={getScreenImage("agenda")}
+            alt="Mockup de l'application"
+            width={218}
+            height={472}
+            className={`s:scale-100 scale-90 border-8 rounded-3xl shadow ${getThemeBorder()}`}
+          />
+        </motion.div>
         <div className="xs:right-[-60px] xs:bottom-40 s:right-[0px] s:bottom-36 s:scale-90 s:rotate-[-10deg] sm:scale-95 sm:right-[10px] sm:top-[-10px] sm:rotate-[-12deg] md:right-[80px] md:top-8 md:z-7 lg:z-5 lg:right-[140px] lg:top-10 lg:scale-100 absolute right-[-100px] bottom-44 z-9 rotate-[-10deg] scale-90">
           <div className="relative flex justify-between items-center gap-4 bg-white p-4 rounded-lg w-[300px]">
             <div className="flex gap-2 items-center">
