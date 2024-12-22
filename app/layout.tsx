@@ -31,7 +31,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Libellule",
+  title: "Libellule - L'application des étudiants de l'IUT d'Angoulême",
   description: "Une app oui !",
 };
 

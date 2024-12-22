@@ -87,47 +87,59 @@ export default function TimelineSection() {
           </div>
           <div className="md:h-[430px] lg:items-stretch lg:w-[1000px] lg:h-auto h-[400px] relative w-full items-center">
             <div className="s:w-[500px] md:w-[600px] lg:w-[500px] md:h-[430px] lg:h-[400px] absolute w-[480px] h-[370px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 flex justify-between items-center">
-              <div className="s:right-64 s:top-0 s:scale-100 md:w-80 md:h-72 lg:w-60 lg:h-72 scale-90 right-56 top-0 absolute w-60 h-72 z-6 rotate-[-10deg]">
-                <Image
-                  src="/raphael_tiphonet.webp"
-                  layout="fill"
-                  objectFit="cover"
-                  alt={""}
-                  className="rounded-2xl relative"
-                />
-                <div className="absolute h-full w-full bg-gradient-to-t from-[#ecf7fe] to-[#ecf7fe00] rounded-2xl"></div>
-                <div className="flex flex-col gap-1 absolute bottom-2 w-full p-4">
-                  <p className="text-blue-900 text-xl font-semibold font-host-grotesk">
-                    Raphaël Tiphonet
-                  </p>
-                  <div className="flex gap-3 items-center">
-                    <Tag name="Développeur" icon={false} alt="" />
-                    <div className="flex gap-2">
-                      <motion.div whileTap={{ scale: 0.8 }}>
-                        <Link
-                          href="https://www.instagram.com/raph_tiph/"
-                          target="_blank"
-                        >
-                          <Instagram
-                            strokeWidth={1.75}
-                            size={20}
-                            className="text-blue-700"
-                          />
-                        </Link>
-                      </motion.div>
-                      <motion.div whileTap={{ scale: 0.8 }}>
-                        <Link
-                          href="https://www.linkedin.com/in/rapha%C3%ABl-tiphonet-a28067257/"
-                          target="_blank"
-                        >
-                          <Linkedin
-                            strokeWidth={1.75}
-                            size={20}
-                            className="text-blue-700"
-                          />
-                        </Link>
-                      </motion.div>
-                      {/* <motion.div whileTap={{ scale: 0.8 }}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  bounce: 0.4,
+                  duration: 0.8,
+                  delay: 0,
+                }}
+                viewport={{ once: true }}
+                className="s:right-64 s:top-0 scale-90 right-56 top-0 absolute z-6"
+              >
+                <div className="s:scale-100 md:w-80 md:h-72 lg:w-60 lg:h-72 w-60 h-72 rotate-[-10deg]">
+                  <Image
+                    src="/raphael_tiphonet.webp"
+                    layout="fill"
+                    objectFit="cover"
+                    alt={""}
+                    className="rounded-2xl relative"
+                  />
+                  <div className="absolute h-full w-full bg-gradient-to-t from-[#ecf7fe] to-[#ecf7fe00] rounded-2xl"></div>
+                  <div className="flex flex-col gap-1 absolute bottom-2 w-full p-4">
+                    <p className="text-blue-900 text-xl font-semibold font-host-grotesk">
+                      Raphaël Tiphonet
+                    </p>
+                    <div className="flex gap-3 items-center">
+                      <Tag name="Développeur" icon={false} alt="" />
+                      <div className="flex gap-2">
+                        <motion.div whileTap={{ scale: 0.8 }}>
+                          <Link
+                            href="https://www.instagram.com/raph_tiph/"
+                            target="_blank"
+                          >
+                            <Instagram
+                              strokeWidth={1.75}
+                              size={20}
+                              className="text-blue-700"
+                            />
+                          </Link>
+                        </motion.div>
+                        <motion.div whileTap={{ scale: 0.8 }}>
+                          <Link
+                            href="https://www.linkedin.com/in/rapha%C3%ABl-tiphonet-a28067257/"
+                            target="_blank"
+                          >
+                            <Linkedin
+                              strokeWidth={1.75}
+                              size={20}
+                              className="text-blue-700"
+                            />
+                          </Link>
+                        </motion.div>
+                        {/* <motion.div whileTap={{ scale: 0.8 }}>
                     <Link
                       href="https://rtiphonet.me/"
                       target="_blank"
@@ -139,63 +151,77 @@ export default function TimelineSection() {
                       />
                     </Link>
                   </motion.div> */}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="s:right-0 s:top-20 s:scale-100 md:w-80 md:h-72 md:top-28 lg:w-60 lg:h-72 lg:top-20 scale-90 right-4 top-20 absolute w-60 h-72 z-5 rotate-[10deg]">
-                <Image
-                  src="/arnaud_graciet.webp"
-                  layout="fill"
-                  objectFit="cover"
-                  alt={""}
-                  className="rounded-2xl relative"
-                />
-                <div className="absolute h-full w-full bg-gradient-to-t from-[#ecf7fe] to-[#ecf7fe00] rounded-2xl"></div>
-                <div className="flex flex-col gap-1 absolute bottom-2 w-full p-4">
-                  <p className="text-blue-900 text-xl font-semibold font-host-grotesk">
-                    Arnaud Graciet
-                  </p>
-                  <div className="flex gap-3 items-center">
-                    <Tag name="Designer" icon={false} alt="" />
-                    <div className="flex gap-2">
-                      <motion.div whileTap={{ scale: 0.8 }}>
-                        <Link
-                          href="https://www.instagram.com/arnaud_gct/"
-                          target="_blank"
-                        >
-                          <Instagram
-                            strokeWidth={1.75}
-                            size={20}
-                            className="text-blue-700"
-                          />
-                        </Link>
-                      </motion.div>
-                      <motion.div whileTap={{ scale: 0.8 }}>
-                        <Link
-                          href="https://www.linkedin.com/in/arnaud-graciet/"
-                          target="_blank"
-                        >
-                          <Linkedin
-                            strokeWidth={1.75}
-                            size={20}
-                            className="text-blue-700"
-                          />
-                        </Link>
-                      </motion.div>
-                      <motion.div whileTap={{ scale: 0.8 }}>
-                        <Link href="https://arnaudgct.fr/" target="_blank">
-                          <Globe
-                            strokeWidth={1.75}
-                            size={20}
-                            className="text-blue-700"
-                          />
-                        </Link>
-                      </motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  bounce: 0.4,
+                  duration: 0.8,
+                  delay: 0.2,
+                }}
+                viewport={{ once: true }}
+                className="s:right-0 s:top-20 md:top-28 right-4 top-20 absolute z-5"
+              >
+                <div className="s:scale-100 md:w-80 md:h-72 lg:w-60 lg:h-72 lg:top-20 scale-90 w-60 h-72 rotate-[10deg]">
+                  <Image
+                    src="/arnaud_graciet.webp"
+                    layout="fill"
+                    objectFit="cover"
+                    alt={""}
+                    className="rounded-2xl relative"
+                  />
+                  <div className="absolute h-full w-full bg-gradient-to-t from-[#ecf7fe] to-[#ecf7fe00] rounded-2xl"></div>
+                  <div className="flex flex-col gap-1 absolute bottom-2 w-full p-4">
+                    <p className="text-blue-900 text-xl font-semibold font-host-grotesk">
+                      Arnaud Graciet
+                    </p>
+                    <div className="flex gap-3 items-center">
+                      <Tag name="Designer" icon={false} alt="" />
+                      <div className="flex gap-2">
+                        <motion.div whileTap={{ scale: 0.8 }}>
+                          <Link
+                            href="https://www.instagram.com/arnaud_gct/"
+                            target="_blank"
+                          >
+                            <Instagram
+                              strokeWidth={1.75}
+                              size={20}
+                              className="text-blue-700"
+                            />
+                          </Link>
+                        </motion.div>
+                        <motion.div whileTap={{ scale: 0.8 }}>
+                          <Link
+                            href="https://www.linkedin.com/in/arnaud-graciet/"
+                            target="_blank"
+                          >
+                            <Linkedin
+                              strokeWidth={1.75}
+                              size={20}
+                              className="text-blue-700"
+                            />
+                          </Link>
+                        </motion.div>
+                        <motion.div whileTap={{ scale: 0.8 }}>
+                          <Link href="https://arnaudgct.fr/" target="_blank">
+                            <Globe
+                              strokeWidth={1.75}
+                              size={20}
+                              className="text-blue-700"
+                            />
+                          </Link>
+                        </motion.div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

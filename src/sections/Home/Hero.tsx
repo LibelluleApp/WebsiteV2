@@ -124,17 +124,47 @@ export default function HeroSection() {
     <section className="s:gap-20 md:pt-[112px] flex flex-col relative gap-4 items-center justify-center pt-[111px] overflow-hidden bg-gradient-to-b from-[#f3f7ff] to-[#deebfe]">
       <div className="flex flex-col items-center justify-center gap-8 z-2 px-[5%]">
         <div className="md:items-center flex flex-col items-start gap-2">
-          <h2 className="s:text-4xl md:text-center text-3xl text-start font-host-grotesk text-blue-900 font-extrabold">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }} // Initial state
+            animate={{ opacity: 1, y: 0 }} // Final state
+            transition={{
+              type: "spring",
+              bounce: 0.4,
+              duration: 0.8,
+              delay: 0,
+            }}
+            className="s:text-4xl md:text-center text-3xl text-start font-host-grotesk text-blue-900 font-extrabold"
+          >
             Votre vie universitaire dans votre smartphone 📱
-          </h2>
-          <h3 className="s:text-xl md:text-center text-lg text-start text-grey font-outfit max-w-[700px]">
+          </motion.h2>
+          <motion.h3
+            initial={{ opacity: 0, y: 50 }} // Initial state
+            animate={{ opacity: 1, y: 0 }} // Final state
+            transition={{
+              type: "spring",
+              bounce: 0.4,
+              duration: 0.8,
+              delay: 0.1,
+            }}
+            className="s:text-xl md:text-center text-lg text-start text-grey font-outfit max-w-[700px]"
+          >
             Libellule a été imaginée par des étudiants de l’IUT d’Angoulême pour
             regrouper tous les services de l’université de Poitiers.
-          </h3>
+          </motion.h3>
         </div>
         <div className="md:items-center flex flex-col items-start gap-2 w-full">
-          <div className="s:gap-4 flex gap-2">
-            <motion.div whileTap={{ scale: 0.9 }}>
+          <div className="s:gap-4 flex gap-0">
+            <motion.div
+              whileTap={{ scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0 }} // Initial state
+              animate={{ opacity: 1, scale: 1 }} // Final state
+              transition={{
+                type: "spring",
+                bounce: 0.4,
+                duration: 0.8,
+                delay: 0.3,
+              }}
+            >
               <Link
                 href="https://play.google.com/store/apps/details?id=com.libellule.libellule"
                 target="_blank"
@@ -142,13 +172,23 @@ export default function HeroSection() {
                 <Image
                   src="/playstore.svg"
                   alt="Bouton Play Store"
-                  width={135}
+                  width={143}
                   height={40}
                   className="s:scale-100 scale-90"
                 />
               </Link>
             </motion.div>
-            <motion.div whileTap={{ scale: 0.8 }}>
+            <motion.div
+              whileTap={{ scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0 }} // Initial state
+              animate={{ opacity: 1, scale: 1 }} // Final state
+              transition={{
+                type: "spring",
+                bounce: 0.4,
+                duration: 0.8,
+                delay: 0.4,
+              }}
+            >
               <Link
                 href="https://apps.apple.com/fr/app/libelluleapp/id6502843331"
                 target="_blank"
@@ -163,12 +203,22 @@ export default function HeroSection() {
               </Link>
             </motion.div>
           </div>
-          <p className="md:text-center text-grey text-start font-outfit text-xs">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }} // Initial state
+            animate={{ opacity: 1, y: 0 }} // Final state
+            transition={{
+              type: "spring",
+              bounce: 0.4,
+              duration: 0.8,
+              delay: 0.5,
+            }}
+            className="md:text-center text-grey text-start font-outfit text-xs"
+          >
             En téléchargeant l’app, vous acceptez les 
             <Link href="/cgu" className="underline">
               conditions générales d’utilisation
             </Link>
-          </p>
+          </motion.p>
         </div>
       </div>
       <div className="sm:h-[400px] flex items-center justify-center relative h-[500px]">
@@ -180,15 +230,15 @@ export default function HeroSection() {
         </div> */}
         <div className="sm:h-[300px] sm:from-0% absolute bottom-0 h-[475px] w-[100vw] bg-gradient-to-t from-[#f3f7ff] from-40% to-[#f3f8ff00] z-8 pointer-events-none"></div>
         <motion.div
-          initial={{ opacity: 0, y: 100 }} // Initial state
-          animate={{ opacity: 1, y: 0 }} // Final state
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
             type: "spring",
             bounce: 0.4,
             duration: 0.8,
             delay: 0.2,
-          }} // Durée de l'animation
-          className="sm:left-[100px] s:left-[50px] absolute left-[25px] top-24 z-6"
+          }}
+          className="sm:left-[100px] s:left-[50px] absolute left-[25px] top-24 z-6 pointer-events-none"
         >
           <Image
             src={getScreenImage("emploi_du_temps")}
@@ -203,7 +253,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 100 }} // Initial state
           animate={{ opacity: 1, y: 0 }} // Final state
           transition={{ type: "spring", bounce: 0.4, duration: 0.8, delay: 0 }} // Durée de l'animation
-          className="absolute left-1/2 top-0 z-7"
+          className="absolute left-1/2 top-0 z-7 pointer-events-none"
         >
           <Image
             src={getScreenImage("accueil")}
@@ -223,7 +273,7 @@ export default function HeroSection() {
             duration: 0.8,
             delay: 0.1,
           }} // Durée de l'animation
-          className="sm:right-[100px] s:right-[50px] absolute right-[25px] top-24 z-6"
+          className="sm:right-[100px] s:right-[50px] absolute right-[25px] top-24 z-6 pointer-events-none"
         >
           <Image
             src={getScreenImage("agenda")}
@@ -233,70 +283,104 @@ export default function HeroSection() {
             className={`s:scale-100 scale-90 border-8 rounded-3xl shadow ${getThemeBorder()}`}
           />
         </motion.div>
-        <div className="xs:right-[-60px] xs:bottom-40 s:right-[0px] s:bottom-36 s:scale-90 s:rotate-[-10deg] sm:scale-95 sm:right-[10px] sm:top-[-10px] sm:rotate-[-12deg] md:right-[80px] md:top-8 md:z-7 lg:z-5 lg:right-[140px] lg:top-10 lg:scale-100 absolute right-[-100px] bottom-44 z-9 rotate-[-10deg] scale-90">
-          <div className="relative flex justify-between items-center gap-4 bg-white p-4 rounded-lg w-[300px]">
-            <div className="flex gap-2 items-center">
-              <div className="bg-blue-900 p-2 rounded-lg">
-                <Lightbulb
-                  strokeWidth={1.75}
-                  className="bg-blue-900 text-blue-50 w-4 h-4"
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }} // Initial state
+          animate={{ opacity: 1, scale: 1 }} // Final state
+          transition={{
+            type: "spring",
+            bounce: 0.4,
+            duration: 0.8,
+            delay: 0.1,
+          }}
+          className="xs:right-[-60px] xs:bottom-40 s:right-[0px] s:bottom-36 sm:right-[30px] sm:top-[-10px] md:right-[80px] md:top-8 md:z-7 lg:z-5 lg:right-[140px] lg:top-10 absolute right-[-100px] bottom-44 z-9"
+        >
+          <div className="s:scale-90 s:rotate-[-10deg] sm:scale-95 sm:rotate-[-12deg] lg:scale-95 rotate-[-10deg] scale-90">
+            <div className="relative flex justify-between items-center gap-4 bg-white p-4 rounded-lg w-[300px]">
+              <div className="flex gap-2 items-center">
+                <div className="bg-blue-900 p-2 rounded-lg">
+                  <Lightbulb
+                    strokeWidth={1.75}
+                    className="bg-blue-900 text-blue-50 w-4 h-4"
+                  />
+                </div>
+                <p className="text-center text-blue-900 font-ubuntu font-medium tracking-tight-custom">
+                  Thème sombre
+                </p>
+              </div>
+              <Switcher setDarkMode={setDarkMode} darkMode={darkMode} />
+              <div className="md:top-[-65px] absolute top-[-50px] right-14 flex flex-col items-end">
+                <p className="font-gochi-hand text-grey text-lg mr-10">
+                  Test le mode sombre
+                </p>
+                <Image
+                  src="/arrow_01.svg"
+                  alt="Flèche"
+                  width={39}
+                  height={20}
                 />
               </div>
-              <p className="text-center text-blue-900 font-ubuntu font-medium tracking-tight-custom">
-                Thème sombre
-              </p>
-            </div>
-            <Switcher setDarkMode={setDarkMode} darkMode={darkMode} />
-            <div className="md:top-[-65px] absolute top-[-50px] right-14 flex flex-col items-end">
-              <p className="font-gochi-hand text-grey text-lg mr-10">
-                Test le mode sombre
-              </p>
-              <Image src="/arrow_01.svg" alt="Flèche" width={39} height={20} />
             </div>
           </div>
-        </div>
-        <div className="xs:left-[-145px] s:left-[-90px] sm:left-[-70px] sm:top-[-60px] sm:rotate-[12deg] md:left-[0px] md:top-[-30px] lg:left-[120px] lg:top-[-10px] lg:z-5 lg:scale-95 xl:left-[120px] xl:top-[-10px] absolute left-[-170px] bottom-2 scale-90 z-9 rotate-[10deg]">
-          <div className="relative flex flex-col justify-center items-start gap-3 bg-white p-4 rounded-lg">
-            <div className="flex gap-2 items-center">
-              <div className="bg-blue-900 p-2 rounded-lg">
-                <Palette
-                  strokeWidth={1.75}
-                  className="bg-blue-900 text-blue-50 w-4 h-4"
-                />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }} // Initial state
+          animate={{ opacity: 1, scale: 1 }} // Final state
+          transition={{
+            type: "spring",
+            bounce: 0.4,
+            duration: 0.8,
+            delay: 0.2,
+          }}
+          className="xs:left-[-145px] s:left-[-90px] sm:left-[-40px] sm:top-[-40px] md:left-[0px] md:top-[-30px] lg:left-[120px] lg:top-[-10px] lg:z-5 xl:left-[120px] xl:top-[-10px] absolute left-[-170px] bottom-2 z-9"
+        >
+          <div className="sm:rotate-[12deg] lg:scale-95 scale-90 rotate-[10deg]">
+            <div className="relative flex flex-col justify-center items-start gap-3 bg-white p-4 rounded-lg">
+              <div className="flex gap-2 items-center">
+                <div className="bg-blue-900 p-2 rounded-lg">
+                  <Palette
+                    strokeWidth={1.75}
+                    className="bg-blue-900 text-blue-50 w-4 h-4"
+                  />
+                </div>
+                <p className="text-center text-blue-900 font-ubuntu font-medium tracking-tight-custom">
+                  Thème de couleur
+                </p>
               </div>
-              <p className="text-center text-blue-900 font-ubuntu font-medium tracking-tight-custom">
-                Thème de couleur
-              </p>
-            </div>
-            <div className="flex gap-4 items-center justify-center">
-              {Object.entries(THEMES).map(([themeKey, themeInfo]) => (
-                <motion.button
-                  key={themeKey}
-                  whileTap={{ scale: 0.8 }}
-                  onClick={() => changeTheme(themeKey as ThemeKey)}
-                  className={`flex flex-col items-center justify-center ${
-                    currentTheme === themeKey ? "opacity-100" : "opacity-25"
-                  }`}
-                >
-                  <div
-                    className={`w-14 h-7 ${themeInfo.color} rounded-lg`}
-                  ></div>
-                  <p
-                    className={`text-xs text-center ${themeInfo.textColor} font-ubuntu font-medium tracking-tight-custom`}
+              <div className="flex gap-4 items-center justify-center">
+                {Object.entries(THEMES).map(([themeKey, themeInfo]) => (
+                  <motion.button
+                    key={themeKey}
+                    whileTap={{ scale: 0.8 }}
+                    onClick={() => changeTheme(themeKey as ThemeKey)}
+                    className={`flex flex-col items-center justify-center ${
+                      currentTheme === themeKey ? "opacity-100" : "opacity-25"
+                    }`}
                   >
-                    {themeInfo.name}
-                  </p>
-                </motion.button>
-              ))}
-            </div>
-            <div className="xl:right-0 absolute top-[-40px] right-4 flex flex-col items-start">
-              <p className="font-gochi-hand text-grey text-lg">
-                Personnalise ton app !
-              </p>
-              <Image src="/arrow_02.svg" alt="Flèche" width={39} height={20} />
+                    <div
+                      className={`w-14 h-7 ${themeInfo.color} rounded-lg`}
+                    ></div>
+                    <p
+                      className={`text-xs text-center ${themeInfo.textColor} font-ubuntu font-medium tracking-tight-custom`}
+                    >
+                      {themeInfo.name}
+                    </p>
+                  </motion.button>
+                ))}
+              </div>
+              <div className="xl:right-0 absolute top-[-40px] right-4 flex flex-col items-start">
+                <p className="font-gochi-hand text-grey text-lg">
+                  Personnalise ton app !
+                </p>
+                <Image
+                  src="/arrow_02.svg"
+                  alt="Flèche"
+                  width={39}
+                  height={20}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         <Image
           src="/rectangle.svg"
           alt="Rectangle"

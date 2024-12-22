@@ -190,32 +190,20 @@ export default function Header() {
                 </motion.div>
               </nav>
               <div className="flex gap-4">
-                <motion.div
-                  exit={{ opacity: 0 }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ ease: "easeOut", duration: 0.3 }}
-                >
-                  <Link
-                    href="https://www.instagram.com/libellule/"
-                    onClick={toggleMenu}
+                {socialLinks.map(({ href, Icon }) => (
+                  <motion.div
+                    key={href}
+                    whileTap={{ scale: 0.8 }}
+                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ ease: "easeOut", duration: 0.3 }}
                   >
-                    <Instagram className="text-blue-700" />
-                  </Link>
-                </motion.div>
-                <motion.div
-                  exit={{ opacity: 0 }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ ease: "easeOut", duration: 0.3 }}
-                >
-                  <Link
-                    href="https://www.linkedin.com/company/libelluleapp/"
-                    onClick={toggleMenu}
-                  >
-                    <Linkedin className="text-blue-700" />
-                  </Link>
-                </motion.div>
+                    <Link href={href} target="_blank" onClick={toggleMenu}>
+                      <Icon strokeWidth={1.75} className="text-blue-700" />
+                    </Link>
+                  </motion.div>
+                ))}
               </div>
             </div>
           ) : null}
