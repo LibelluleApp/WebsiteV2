@@ -8,7 +8,7 @@ export default function CGU() {
           <h2 className="text-blue-900 font-extrabold text-2xl font-host-grotesk">
             Politique de Confidentialité (Privacy Policy)
           </h2>
-          <p className="text-grey font-medium text-lg">
+          <p className="text-grey font-normal text-lg">
             En vigueur au 02/09/2024
           </p>
         </div>
@@ -183,7 +183,7 @@ export default function CGU() {
           <h2 className="text-blue-900 font-extrabold text-2xl font-host-grotesk">
             Conditions Générales d&apos;Utilisation
           </h2>
-          <p className="text-grey font-medium text-lg">
+          <p className="text-grey font-normal text-lg">
             En vigueur au 02/09/2024
           </p>
         </div>

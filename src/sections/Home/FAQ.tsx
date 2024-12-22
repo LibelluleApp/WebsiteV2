@@ -73,6 +73,7 @@ export const FAQ: React.FC<FAQProps> = ({ initialOpenIndex = null }) => {
           </p>
         </div>
       ),
+      date: null,
     },
     {
       title: "Comment fonctionne les devoirs ?",
@@ -97,6 +98,7 @@ export const FAQ: React.FC<FAQProps> = ({ initialOpenIndex = null }) => {
           </p>
         </div>
       ),
+      date: null,
     },
     {
       title: "Comment est choisi le responsable des devoirs ?",
@@ -120,6 +122,7 @@ export const FAQ: React.FC<FAQProps> = ({ initialOpenIndex = null }) => {
           </p>
         </div>
       ),
+      date: null,
     },
     {
       title: "En tant que responsable des devoirs, que devez-vous faire ?",
@@ -154,6 +157,7 @@ export const FAQ: React.FC<FAQProps> = ({ initialOpenIndex = null }) => {
           </p>
         </div>
       ),
+      date: null,
     },
   ];
 
@@ -180,6 +184,7 @@ export const FAQ: React.FC<FAQProps> = ({ initialOpenIndex = null }) => {
         items={faqItems}
         openIndex={activeIndex}
         onOpenChange={setActiveIndex}
+        feature="faq"
       />
     </section>
   );

@@ -5,18 +5,21 @@ import { motion, AnimatePresence } from "framer-motion";
 export interface AccordionItem {
   title: string;
   content: React.ReactNode;
+  date: string | null;
 }
 
 export interface AccordionProps {
   items: AccordionItem[];
   openIndex: number | null;
   onOpenChange: (index: number | null) => void;
+  feature: string;
 }
 
 export const Accordion: React.FC<AccordionProps> = ({
   items,
   openIndex,
   onOpenChange,
+  feature,
 }) => {
   return (
     <div className="w-full space-y-2">
@@ -45,6 +48,9 @@ export const Accordion: React.FC<AccordionProps> = ({
                 {item.title}
               </span>
             </div>
+            {feature === "patchnotes" && (
+              <p className="text-grey text-base font-medium">{item.date}</p>
+            )}
           </button>
 
           <AnimatePresence initial={false}>
@@ -69,7 +75,7 @@ export const Accordion: React.FC<AccordionProps> = ({
                 }}
                 className="overflow-hidden"
               >
-                <div className="px-4 pb-4">{item.content}</div>
+                <div className="px-4 pb-6">{item.content}</div>
               </motion.div>
             )}
           </AnimatePresence>
