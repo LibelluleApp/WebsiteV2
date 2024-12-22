@@ -1,20 +1,89 @@
 "use client";
-import Link from "next/link"; // Pour les liens de navigation
-import { useState } from "react";
-import { Menu, X, Linkedin, Instagram, Youtube } from "lucide-react"; // Pour les icônes de menu
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, Linkedin, Instagram, Youtube } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
+const navLinks = [
+  {
+    href: "/",
+    label: "Découvrir Libellule",
+    color: "text-blue-700",
+    indicatorColor: "bg-blue-700",
+  },
+  {
+    href: "/don",
+    label: "Nous soutenir",
+    color: "text-blue-900",
+    indicatorColor: "bg-blue-900",
+  },
+];
+
+const socialLinks = [
+  {
+    href: "https://www.instagram.com/libelluleapp/",
+    Icon: Instagram,
+  },
+  {
+    href: "https://www.linkedin.com/company/libelluleapp/",
+    Icon: Linkedin,
+  },
+  {
+    href: "https://www.youtube.com/@LibelluleApp",
+    Icon: Youtube,
+  },
+];
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const navRef = useRef<HTMLUListElement>(null);
+  const [indicatorStyle, setIndicatorStyle] = useState({
+    left: 0,
+    width: 0,
+    color: "bg-blue-700",
+    opacity: 0,
+  });
+
+  const isMainPage = navLinks.some((link) => link.href === pathname);
+
+  useEffect(() => {
+    const updateIndicator = () => {
+      const navElement = navRef.current;
+      if (!navElement) return;
+
+      if (!isMainPage) {
+        setIndicatorStyle((prev) => ({ ...prev, opacity: 0 }));
+        return;
+      }
+
+      const activeLink = navElement.querySelector(`a[href="${pathname}"]`);
+      if (activeLink) {
+        const { offsetLeft, offsetWidth } = activeLink as HTMLElement;
+        const activeNavLink = navLinks.find((link) => link.href === pathname);
+
+        setIndicatorStyle({
+          left: offsetLeft,
+          width: offsetWidth,
+          color: activeNavLink?.indicatorColor || "bg-blue-700",
+          opacity: 1,
+        });
+      }
+    };
+
+    updateIndicator();
+    window.addEventListener("resize", updateIndicator);
+
+    return () => {
+      window.removeEventListener("resize", updateIndicator);
+    };
+  }, [pathname, isMainPage]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const pathname = usePathname();
-  console.log(pathname);
 
   return (
     <header className="fixed top-0 left-0 w-full z-30">
@@ -26,55 +95,41 @@ export default function Header() {
             Libellule
           </h1>
         </Link>
-        <nav className="md:flex justify-between items-center">
+        <nav className="relative">
+          {/* Indicateur animé */}
+          <motion.div
+            className={`absolute bottom-0 h-0.5 ${indicatorStyle.color}`}
+            animate={{
+              left: indicatorStyle.left,
+              width: indicatorStyle.width,
+              opacity: indicatorStyle.opacity,
+            }}
+            transition={{ type: "spring", stiffness: 500, damping: 30 }}
+          />
           {/* Liens de navigation desktop */}
-          <ul className="flex gap-8">
-            <Link href="/" className="relative text-blue-700 font-medium">
-              <li className="py-4">
-                Découvrir Libellule
-                {pathname === "/" ? (
-                  <motion.div
-                    className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-700"
-                    layoutId="underline"
-                  />
-                ) : null}
+          <ul ref={navRef} className="flex gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href} className="py-4">
+                <Link
+                  href={link.href}
+                  className={`relative font-medium ${link.color} ${
+                    pathname === link.href ? "active" : ""
+                  }`}
+                >
+                  {link.label}
+                </Link>
               </li>
-            </Link>
-            <Link href="/don" className="relative text-blue-900 font-medium">
-              <li className="py-4">
-                Nous soutenir
-                {pathname === "/don" ? (
-                  <motion.div
-                    className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-900"
-                    layoutId="underline"
-                  />
-                ) : null}
-              </li>
-            </Link>
+            ))}
           </ul>
         </nav>
         <div className="flex gap-4">
-          <motion.div whileTap={{ scale: 0.8 }}>
-            <Link
-              href="https://www.instagram.com/libelluleapp/"
-              target="_blank"
-            >
-              <Instagram strokeWidth={1.75} className="text-blue-700" />
-            </Link>
-          </motion.div>
-          <motion.div whileTap={{ scale: 0.8 }}>
-            <Link
-              href="https://www.linkedin.com/company/libelluleapp/"
-              target="_blank"
-            >
-              <Linkedin strokeWidth={1.75} className="text-blue-700" />
-            </Link>
-          </motion.div>
-          <motion.div whileTap={{ scale: 0.8 }}>
-            <Link href="https://www.youtube.com/@LibelluleApp" target="_blank">
-              <Youtube strokeWidth={1.75} className="text-blue-700" />
-            </Link>
-          </motion.div>
+          {socialLinks.map(({ href, Icon }) => (
+            <motion.div key={href} whileTap={{ scale: 0.8 }}>
+              <Link href={href} target="_blank">
+                <Icon strokeWidth={1.75} className="text-blue-700" />
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </div>
 
@@ -165,13 +220,6 @@ export default function Header() {
             </div>
           ) : null}
         </AnimatePresence>
-
-        <motion.div
-          initial={{ height: "55px" }}
-          animate={{ height: isMenuOpen ? "155px" : "55px" }}
-          transition={{ type: "spring", bounce: 0.35 }}
-          className="absolute top-0 right-0 bg-white shadow w-full z-40"
-        ></motion.div>
       </div>
     </header>
   );
