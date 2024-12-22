@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link"; // Pour les liens de navigation
 import { useState } from "react";
-import { Menu, X, Linkedin, Instagram } from "lucide-react"; // Pour les icônes de menu
+import { Menu, X, Linkedin, Instagram, Youtube } from "lucide-react"; // Pour les icônes de menu
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -68,6 +68,11 @@ export default function Header() {
               target="_blank"
             >
               <Linkedin strokeWidth={1.75} className="text-blue-700" />
+            </Link>
+          </motion.div>
+          <motion.div whileTap={{ scale: 0.8 }}>
+            <Link href="https://www.youtube.com/@LibelluleApp" target="_blank">
+              <Youtube strokeWidth={1.75} className="text-blue-700" />
             </Link>
           </motion.div>
         </div>
