@@ -180,21 +180,21 @@ export default function HeroSection() {
         </div> */}
         <div className="sm:h-[300px] sm:from-0% absolute bottom-0 h-[475px] w-[100vw] bg-gradient-to-t from-[#f3f7ff] from-40% to-[#f3f8ff00] z-8 pointer-events-none"></div>
         <Image
-          src={`${getScreenImage("emploi_du_temps")}?v=${Date.now()}`}
+          src={getScreenImage("emploi_du_temps")}
           alt="Mockup de l'application"
           width={218}
           height={472}
           className={`sm:left-[100px] s:left-[50px] s:scale-100 scale-90 absolute left-[25px] top-24 z-6 border-8 rounded-3xl shadow ${getThemeBorder()}`}
         />
         <Image
-          src={`${getScreenImage("accueil")}?v=${Date.now()}`}
+          src={getScreenImage("accueil")}
           alt="Mockup de l'application"
           width={276}
           height={472}
           className={`s:scale-100 scale-90 absolute left-1/2 transform -translate-x-1/2 top-0 z-7 border-8 rounded-3xl shadow ${getThemeBorder()}`}
         />
         <Image
-          src={`${getScreenImage("agenda")}?v=${Date.now()}`}
+          src={getScreenImage("agenda")}
           alt="Mockup de l'application"
           width={218}
           height={472}
