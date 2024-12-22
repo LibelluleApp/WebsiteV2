@@ -23,7 +23,7 @@ export default function TimelineSection() {
           <div className="w-full">
             <div className="relative">
               <div className="flex flex-col gap-2 border-l-2 px-6 border-grey">
-                <p className="text-blue-900 text-xl font-extrabold font-host-grotesk">
+                <p className="text-blue-900 text-xl font-extrabold font-host-grotesk ">
                   De septembre 2024 à aujourd&apos;hui
                 </p>
                 <Tag
@@ -49,7 +49,7 @@ export default function TimelineSection() {
                   </p>
                 </div>
               </div>
-              <div className="absolute top-1 -ml-1.5 h-4 w-4 rounded-full bg-blue-900"></div>
+              <div className="absolute top-1 left-[-6.5px] h-4 w-4 rounded-full bg-blue-900"></div>
             </div>
             <div className="relative">
               <div className="flex flex-col gap-2 border-l-2 px-6 border-grey">
@@ -82,7 +82,7 @@ export default function TimelineSection() {
                   </p>
                 </div>
               </div>
-              <div className="absolute top-1 -ml-1.5 h-4 w-4 rounded-full bg-blue-900"></div>
+              <div className="absolute top-1 left-[-6.5px] h-4 w-4 rounded-full bg-blue-900"></div>
             </div>
           </div>
           <div className="md:h-[430px] lg:items-stretch lg:w-[1000px] lg:h-auto h-[400px] relative w-full items-center">

@@ -11,6 +11,7 @@ interface CardProps {
   screens: [string?, string?, string?][]; // Tableau avec URL, x, et y
   alt: string[];
   size: "md" | "lg" | "xl";
+  feature: string;
 }
 
 export default function Card({
@@ -21,6 +22,7 @@ export default function Card({
   screens,
   alt,
   size,
+  feature,
 }: CardProps) {
   return (
     <div
@@ -68,12 +70,48 @@ export default function Card({
             </div>
           );
         })}
+        {feature === "Personnalisation" && (
+          <>
+            <div className="flex flex-col gap-2 absolute top-2 right-[-50px] z-6">
+              <Image
+                src="/screens/themes/Blue/Light/personnalisation/photo_profil.webp"
+                alt="Flèche"
+                width={250}
+                height={50}
+                className=""
+              />
+              <Image
+                src="/screens/themes/Blue/Light/personnalisation/theme_sombre.webp"
+                alt="Flèche"
+                width={250}
+                height={50}
+                className=""
+              />
+              <Image
+                src="/screens/themes/Blue/Light/personnalisation/theme_couleur.webp"
+                alt="Flèche"
+                width={250}
+                height={50}
+                className=""
+              />
+            </div>
+            <Image
+              src="/screens/themes/Blue/Light/personnalisation/screen_theme_sombre.webp"
+              alt="Flèche"
+              width={250}
+              height={50}
+              className="absolute top-0 right-[180px] rounded-xl shadow-lg rotate-[-8deg] z-5"
+            />
+          </>
+        )}
       </div>
 
       <div
         className={`absolute top-0 h-full w-full ${
           alignCenter === true
             ? "bg-gradient-to-r from-50%"
+            : feature === "Personnalisation"
+            ? "bg-gradient-to-tr from-40%"
             : "bg-gradient-to-tr from-30%"
         } from-[#edf8ff] to-[#edf8ff00] z-4`}
       ></div>

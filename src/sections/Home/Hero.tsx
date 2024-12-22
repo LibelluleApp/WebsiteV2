@@ -43,56 +43,57 @@ const THEMES = {
 const SCREEN_IMAGES = {
   light: {
     azure: {
-      agenda: "/screens/themes/Blue/Light/Agenda.png",
-      accueil: "/screens/themes/Blue/Light/Accueil.png",
-      emploi_du_temps: "/screens/themes/Blue/Light/Emploi_du_temps.png",
+      agenda: "/screens/themes/Blue/Light/devoirs/Devoirs.webp",
+      accueil: "/screens/themes/Blue/Light/Accueil.webp",
+      emploi_du_temps:
+        "/screens/themes/Blue/Light/emploi_du_temps/week/Emploi_du_temps.webp",
     },
     petal: {
-      agenda: "/screens/themes/Pink/Light/Agenda.png",
-      accueil: "/screens/themes/Pink/Light/Accueil.png",
-      emploi_du_temps: "/screens/themes/Pink/Light/Emploi_du_temps.png",
+      agenda: "/screens/themes/Pink/Light/Agenda.webp",
+      accueil: "/screens/themes/Pink/Light/Accueil.webp",
+      emploi_du_temps: "/screens/themes/Pink/Light/Emploi_du_temps.webp",
     },
     amethyst: {
-      agenda: "/screens/themes/Purple/Light/Agenda.png",
-      accueil: "/screens/themes/Purple/Light/Accueil.png",
-      emploi_du_temps: "/screens/themes/Purple/Light/Emploi_du_temps.png",
+      agenda: "/screens/themes/Purple/Light/Agenda.webp",
+      accueil: "/screens/themes/Purple/Light/Accueil.webp",
+      emploi_du_temps: "/screens/themes/Purple/Light/Emploi_du_temps.webp",
     },
     corail: {
-      agenda: "/screens/themes/Orange/Light/Agenda.png",
-      accueil: "/screens/themes/Orange/Light/Accueil.png",
-      emploi_du_temps: "/screens/themes/Orange/Light/Emploi_du_temps.png",
+      agenda: "/screens/themes/Orange/Light/Agenda.webp",
+      accueil: "/screens/themes/Orange/Light/Accueil.webp",
+      emploi_du_temps: "/screens/themes/Orange/Light/Emploi_du_temps.webp",
     },
     emerald: {
-      agenda: "/screens/themes/Green/Light/Agenda.png",
-      accueil: "/screens/themes/Green/Light/Accueil.png",
-      emploi_du_temps: "/screens/themes/Green/Light/Emploi_du_temps.png",
+      agenda: "/screens/themes/Green/Light/Agenda.webp",
+      accueil: "/screens/themes/Green/Light/Accueil.webp",
+      emploi_du_temps: "/screens/themes/Green/Light/Emploi_du_temps.webp",
     },
   },
   dark: {
     azure: {
-      agenda: "/screens/themes/Blue/Dark/Agenda.png",
-      accueil: "/screens/themes/Blue/Dark/Accueil.png",
-      emploi_du_temps: "/screens/themes/Blue/Dark/Emploi_du_temps.png",
+      agenda: "/screens/themes/Blue/Dark/Agenda.webp",
+      accueil: "/screens/themes/Blue/Dark/Accueil.webp",
+      emploi_du_temps: "/screens/themes/Blue/Dark/Emploi_du_temps.webp",
     },
     petal: {
-      agenda: "/screens/themes/Pink/Dark/Agenda.png",
-      accueil: "/screens/themes/Pink/Dark/Accueil.png",
-      emploi_du_temps: "/screens/themes/Pink/Dark/Emploi_du_temps.png",
+      agenda: "/screens/themes/Pink/Dark/Agenda.webp",
+      accueil: "/screens/themes/Pink/Dark/Accueil.webp",
+      emploi_du_temps: "/screens/themes/Pink/Dark/Emploi_du_temps.webp",
     },
     amethyst: {
-      agenda: "/screens/themes/Purple/Dark/Agenda.png",
-      accueil: "/screens/themes/Purple/Dark/Accueil.png",
-      emploi_du_temps: "/screens/themes/Purple/Dark/Emploi_du_temps.png",
+      agenda: "/screens/themes/Purple/Dark/Agenda.webp",
+      accueil: "/screens/themes/Purple/Dark/Accueil.webp",
+      emploi_du_temps: "/screens/themes/Purple/Dark/Emploi_du_temps.webp",
     },
     corail: {
-      agenda: "/screens/themes/Orange/Dark/Agenda.png",
-      accueil: "/screens/themes/Orange/Dark/Accueil.png",
-      emploi_du_temps: "/screens/themes/Orange/Dark/Emploi_du_temps.png",
+      agenda: "/screens/themes/Orange/Dark/Agenda.webp",
+      accueil: "/screens/themes/Orange/Dark/Accueil.webp",
+      emploi_du_temps: "/screens/themes/Orange/Dark/Emploi_du_temps.webp",
     },
     emerald: {
-      agenda: "/screens/themes/Green/Dark/Agenda.png",
-      accueil: "/screens/themes/Green/Dark/Accueil.png",
-      emploi_du_temps: "/screens/themes/Green/Dark/Emploi_du_temps.png",
+      agenda: "/screens/themes/Green/Dark/Agenda.webp",
+      accueil: "/screens/themes/Green/Dark/Accueil.webp",
+      emploi_du_temps: "/screens/themes/Green/Dark/Emploi_du_temps.webp",
     },
   },
 };
@@ -126,10 +127,7 @@ export default function HeroSection() {
           <h2 className="s:text-4xl md:text-center text-3xl text-start font-host-grotesk text-blue-900 font-extrabold">
             Votre vie universitaire dans votre smartphone 📱
           </h2>
-          <h3
-            className="text-blue-900 text-xl font-extrabold font-host-grotesk"
-            className="s:text-xl md:text-center text-lg text-start text-grey font-outfit max-w-[700px]"
-          >
+          <h3 className="s:text-xl md:text-center text-lg text-start text-grey font-outfit max-w-[700px]">
             Libellule a été imaginée par des étudiants de l’IUT d’Angoulême pour
             regrouper tous les services de l’université de Poitiers.
           </h3>

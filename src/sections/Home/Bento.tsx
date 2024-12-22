@@ -35,18 +35,19 @@ export default function BentoSection() {
             btn={false}
             screens={[
               [
-                "/screens/themes/Blue/Light/Emploi_du_temps.png",
+                "/screens/themes/Blue/Light/emploi_du_temps/day/Emploi_du_temps.webp",
                 "top-[60px]",
                 "right-[100px]",
               ],
               [
-                "/screens/themes/Blue/Light/Emploi_du_temps.png",
+                "/screens/themes/Blue/Light/emploi_du_temps/week/Emploi_du_temps.webp",
                 "top-[10px]",
-                "right-[-70px]",
+                "right-[-60px]",
               ],
             ]}
             alt={["Mockup de l'application", "Mockup de l'application"]}
             size={"lg"}
+            feature={"Emploi du temps"}
           />
         </div>
         <div className="col-start-1 row-start-2 md:col-start-4 md:row-start-1 md:col-span-3 md:row-span-1 h-fit">
@@ -69,18 +70,19 @@ export default function BentoSection() {
             btn={"En savoir plus"}
             screens={[
               [
-                "/screens/themes/Blue/Light/Agenda.png",
+                "/screens/themes/Blue/Light/devoirs/Devoirs_Add.webp",
                 "top-[60px]",
                 "right-[100px]",
               ],
               [
-                "/screens/themes/Blue/Light/Agenda.png",
+                "/screens/themes/Blue/Light/devoirs/Devoirs.webp",
                 "top-[10px]",
                 "right-[-70px]",
               ],
             ]}
             alt={["Mockup de l'application", "Mockup de l'application"]}
             size={"xl"}
+            feature={"Devoirs"}
           />
         </div>
         <div className="col-start-1 row-start-3 md:col-start-1 md:row-start-2 md:col-span-6 md:row-span-1 lg:col-start-1 lg:row-start-2 lg:col-span-2 lg:row-span-1 h-fit">
@@ -98,18 +100,19 @@ export default function BentoSection() {
             btn={false}
             screens={[
               [
-                "/screens/themes/Blue/Light/Mails.png",
+                "/screens/themes/Blue/Light/mails/Mails_Details.webp",
                 "top-[40px]",
                 "right-[70px]",
               ],
               [
-                "/screens/themes/Blue/Light/Mails.png",
+                "/screens/themes/Blue/Light/mails/Mails.webp",
                 "top-[10px]",
                 "right-[-70px]",
               ],
             ]}
             alt={["Mockup de l'application", "Mockup de l'application"]}
             size={"md"}
+            feature={"Mails"}
           />
         </div>
         <div className="col-start-1 row-start-4 md:col-start-1 md:row-start-3 md:col-span-3 md:row-span-1 lg:col-start-3 lg:row-start-2 lg:col-span-2 lg:row-span-1 h-fit">
@@ -128,13 +131,14 @@ export default function BentoSection() {
             screens={[
               [""],
               [
-                "/screens/themes/Blue/Light/Restauration.png",
+                "/screens/themes/Blue/Light/restauration/Restauration.webp",
                 "bottom-[-105px]",
                 "right-[-20px]",
               ],
             ]}
             alt={["Mockup de l'application", "Mockup de l'application"]}
             size={"md"}
+            feature={"Restauration"}
           />
         </div>
         <div className="col-start-1 row-start-5 md:col-start-4 md:row-start-3 md:col-span-3 md:row-span-1 lg:col-start-5 lg:row-start-2 lg:col-span-2 lg:row-span-1 h-fit">
@@ -150,20 +154,10 @@ export default function BentoSection() {
             }
             alignCenter={false}
             btn={false}
-            screens={[
-              [
-                "/screens/themes/Blue/Light/Paramètres.png",
-                "top-[40px]",
-                "right-[50px]",
-              ],
-              [
-                "/screens/themes/Blue/Light/Couleurs.png",
-                "top-[10px]",
-                "right-[-70px]",
-              ],
-            ]}
+            screens={[[""], [""]]}
             alt={["Mockup de l'application", "Mockup de l'application"]}
             size={"md"}
+            feature={"Personnalisation"}
           />
         </div>
       </div>
