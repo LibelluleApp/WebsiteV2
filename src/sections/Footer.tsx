@@ -87,23 +87,17 @@ export default function Footer() {
             <div className="flex flex-col gap-1">
               <Link
                 href="/patchnotes"
-                target="_blank"
                 className="text-blue-800 font-normal text-lg"
               >
                 Journal de mises à jour
               </Link>
               <Link
                 href="/mentions-legales"
-                target="_blank"
                 className="text-blue-800 font-normal text-lg"
               >
                 Mentions légales
               </Link>
-              <Link
-                href="/cgu"
-                target="_blank"
-                className="text-blue-800 font-normal text-lg"
-              >
+              <Link href="/cgu" className="text-blue-800 font-normal text-lg">
                 CGU
               </Link>
             </div>
