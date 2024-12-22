@@ -27,7 +27,7 @@ export const Accordion: React.FC<AccordionProps> = ({
         >
           <button
             onClick={() => onOpenChange(openIndex === index ? null : index)}
-            className="w-full flex items-center justify-between p-4 hover:bg-gray-50"
+            className="w-full flex items-center justify-between p-4"
           >
             <div className="flex items-center gap-3">
               <motion.div

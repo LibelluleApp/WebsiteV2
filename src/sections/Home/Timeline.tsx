@@ -19,7 +19,7 @@ export default function TimelineSection() {
             indépendant.
           </p>
         </div>
-        <div className="lg:flex-row lg:gap-6 flex flex-col gap-14 w-full">
+        <div className="md:gap-14 lg:flex-row lg:gap-6 flex flex-col gap-8 w-full">
           <div className="w-full">
             <div className="relative">
               <div className="flex flex-col gap-2 border-l-2 px-6 border-grey">
@@ -86,7 +86,7 @@ export default function TimelineSection() {
             </div>
           </div>
           <div className="md:h-[430px] lg:items-stretch lg:w-[1000px] lg:h-auto h-[400px] relative w-full items-center">
-            <div className="s:w-[500px] md:w-[600px] lg:w-[500px] md:h-[430px] lg:h-[400px] absolute w-[480px] h-[400px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 flex justify-between items-center">
+            <div className="s:w-[500px] md:w-[600px] lg:w-[500px] md:h-[430px] lg:h-[400px] absolute w-[480px] h-[370px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 flex justify-between items-center">
               <div className="s:right-64 s:top-0 s:scale-100 md:w-80 md:h-72 lg:w-60 lg:h-72 scale-90 right-56 top-0 absolute w-60 h-72 z-6 rotate-[-10deg]">
                 <Image
                   src="/rapahel_tiphonet.png"

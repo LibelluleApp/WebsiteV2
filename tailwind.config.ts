@@ -77,6 +77,7 @@ export default {
           border: "var(--blue-ribbon-200)",
           bg: "var(--blue-ribbon-900)",
         },
+        background: "#F3F8FF",
         pink: { border: "#FBCFE8", bg: "#831843" },
         purple: { border: "#DDD6FE", bg: "#4C1D95" },
         orange: { border: "#FED7AA", bg: "#78350F" },
