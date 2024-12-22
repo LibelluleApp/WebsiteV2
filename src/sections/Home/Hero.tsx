@@ -126,7 +126,10 @@ export default function HeroSection() {
           <h2 className="s:text-4xl md:text-center text-3xl text-start font-host-grotesk text-blue-900 font-extrabold">
             Votre vie universitaire dans votre smartphone 📱
           </h2>
-          <h3 className="s:text-xl md:text-center text-lg text-start text-grey font-outfit max-w-[700px]">
+          <h3
+            className="text-blue-900 text-xl font-extrabold font-host-grotesk"
+            className="s:text-xl md:text-center text-lg text-start text-grey font-outfit max-w-[700px]"
+          >
             Libellule a été imaginée par des étudiants de l’IUT d’Angoulême pour
             regrouper tous les services de l’université de Poitiers.
           </h3>
