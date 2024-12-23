@@ -114,7 +114,7 @@ export default function Header() {
               <li key={link.href} className="py-4">
                 <Link
                   href={link.href}
-                  className={`relative font-medium ${link.color} ${
+                  className={`relative py-4 font-medium ${link.color} ${
                     pathname === link.href ? "active" : ""
                   }`}
                 >
