@@ -32,8 +32,8 @@ jobs:
           host: ${{ secrets.VPS_SSH_HOST }}
           username: ${{ secrets.VPS_SSH_NAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          source: "build/"
+          source: ".next/"
           target: ${{ secrets.VPS_SSH_PATH }}
           script: |
-            rm -rf ${{ secrets.VPS_SSH_PATH }}/*
-            cp -r build/* ${{ secrets.VPS_SSH_PATH }}/
+            rm -rf ${{ secrets.VPS_SSH_PATH }}/.next/*
+            cp -r .next/* ${{ secrets.VPS_SSH_PATH }}/.next/
