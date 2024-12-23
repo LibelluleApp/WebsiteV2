@@ -101,6 +101,7 @@ const SCREEN_IMAGES = {
 export default function HeroSection() {
   const [darkMode, setDarkMode] = useState(false);
   const [currentTheme, setCurrentTheme] = useState("azure");
+  const [animateKey, setAnimateKey] = useState(0); // State pour déclencher l'animation
 
   // Récupérer les images selon le mode et le thème
   type ScreenName = "agenda" | "accueil" | "emploi_du_temps";
@@ -114,6 +115,12 @@ export default function HeroSection() {
   // Fonction pour changer de thème
   const changeTheme = (theme: ThemeKey): void => {
     setCurrentTheme(theme);
+    setAnimateKey((prevKey) => prevKey + 1); // Incrémenter la clé pour forcer l'animation
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode((prev) => !prev);
+    setAnimateKey((prevKey) => prevKey + 1); // Incrémenter la clé pour forcer l'animation
   };
 
   const getThemeBorder = (): string => {
@@ -230,6 +237,7 @@ export default function HeroSection() {
         </div> */}
         <div className="sm:h-[300px] sm:from-0% absolute bottom-0 h-[475px] w-[100vw] bg-gradient-to-t from-[#f3f7ff] from-40% to-[#f3f8ff00] z-8 pointer-events-none"></div>
         <motion.div
+          key={`${animateKey}-emploi_du_temps`}
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -250,6 +258,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
+          key={`${animateKey}-accueil`} // Clé unique pour l'écran accueil
           initial={{ opacity: 0, y: 100 }} // Initial state
           animate={{ opacity: 1, y: 0 }} // Final state
           transition={{ type: "spring", bounce: 0.4, duration: 0.8, delay: 0 }} // Durée de l'animation
@@ -265,6 +274,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
+          key={`${animateKey}-agenda`} // Clé unique pour l'écran agenda
           initial={{ opacity: 0, y: 100 }} // Initial state
           animate={{ opacity: 1, y: 0 }} // Final state
           transition={{
@@ -307,7 +317,7 @@ export default function HeroSection() {
                   Thème sombre
                 </p>
               </div>
-              <Switcher setDarkMode={setDarkMode} darkMode={darkMode} />
+              <Switcher setDarkMode={toggleDarkMode} darkMode={darkMode} />
               <div className="md:top-[-65px] absolute top-[-50px] right-14 flex flex-col items-end">
                 <p className="font-gochi-hand text-grey text-lg mr-10">
                   Test le mode sombre
