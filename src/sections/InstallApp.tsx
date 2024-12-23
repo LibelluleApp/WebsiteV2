@@ -21,10 +21,7 @@ export default function InstallApp() {
           </div>
           <div className="flex flex-col items-start gap-2 w-full">
             <div className="s:gap-4 flex gap-0">
-              <motion.div
-                whileTap={{ scale: 0.8 }}
-                className="s:scale-100 scale-90"
-              >
+              <motion.div whileTap={{ scale: 0.8 }}>
                 <Link
                   href="https://play.google.com/store/apps/details?id=com.libellule.libellule"
                   target="_blank"
@@ -34,13 +31,11 @@ export default function InstallApp() {
                     alt="Bouton Play Store"
                     width={143}
                     height={40}
+                    className="s:scale-100 scale-90"
                   />
                 </Link>
               </motion.div>
-              <motion.div
-                whileTap={{ scale: 0.8 }}
-                className="s:scale-100 scale-90"
-              >
+              <motion.div whileTap={{ scale: 0.8 }}>
                 <Link
                   href="https://apps.apple.com/fr/app/libelluleapp/id6502843331"
                   target="_blank"
@@ -50,6 +45,7 @@ export default function InstallApp() {
                     alt="Bouton App Store"
                     width={135}
                     height={40}
+                    className="s:scale-100 scale-90"
                   />
                 </Link>
               </motion.div>
