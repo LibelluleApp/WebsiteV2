@@ -1,0 +1,51 @@
+name: Build et déploiement sur le VPS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "21.7"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint JavaScript/JSX files
+        run: npm run lint
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Compress .next directory
+        run: tar -czf next-build.tar.gz .next
+
+      - name: Copy build to VPS
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.VPS_SSH_HOST }}
+          username: ${{ secrets.VPS_SSH_NAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          source: "next-build.tar.gz"
+          target: "/tmp"
+
+      - name: Deploy on VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_SSH_HOST }}
+          username: ${{ secrets.VPS_SSH_NAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            cd ${{ secrets.VPS_SSH_PATH }}
+            rm -rf .next
+            tar xzf /tmp/next-build.tar.gz
+            rm /tmp/next-build.tar.gz
