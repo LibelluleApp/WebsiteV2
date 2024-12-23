@@ -24,12 +24,12 @@ export const Accordion: React.FC<AccordionProps> = ({
   return (
     <div className="w-full space-y-2">
       {items.map((item, index) => (
-        <motion.div
-          whileTap={{ scale: 0.95 }}
+        <div
           key={index}
           className="border border-grey rounded-lg overflow-hidden"
         >
-          <button
+          <motion.button
+            whileTap={{ scale: 0.98 }}
             onClick={() => onOpenChange(openIndex === index ? null : index)}
             className="w-full flex items-center justify-between p-4"
           >
@@ -52,7 +52,7 @@ export const Accordion: React.FC<AccordionProps> = ({
             {feature === "patchnotes" && (
               <p className="text-grey text-base font-medium">{item.date}</p>
             )}
-          </button>
+          </motion.button>
 
           <AnimatePresence initial={false}>
             {openIndex === index && (
@@ -80,7 +80,7 @@ export const Accordion: React.FC<AccordionProps> = ({
               </motion.div>
             )}
           </AnimatePresence>
-        </motion.div>
+        </div>
       ))}
     </div>
   );
