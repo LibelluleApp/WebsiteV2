@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -16,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "21.7" # Change selon la version de Node.js que tu utilises
+          node-version: "21.7"
 
       - name: Install dependencies
         run: npm install
@@ -24,21 +23,17 @@ jobs:
       - name: Lint JavaScript/JSX files
         run: npm run lint
 
-      # - name: List directory contents
-      #   run: pwd | ls -R
-
       - name: Build the project
         run: npm run build
 
       - name: Deploy to VPS
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.VPS_SSH_KEY }}
-          VPS_HOST: ${{ secrets.VPS_SSH_HOST }}
-          VPS_USER: ${{ secrets.VPS_SSH_NAME }}
-          VPS_DEPLOY_PATH: ${{ secrets.VPS_SSH_PATH }}
-
-        run: |
-          echo "$SSH_PRIVATE_KEY" > /tmp/ssh_key
-          chmod 600 /tmp/ssh_key
-          rsync -avz -e "ssh -i /tmp/ssh_key -o StrictHostKeyChecking=no" build/ $VPS_USER@$VPS_HOST:$VPS_DEPLOY_PATH
-          rm /tmp/ssh_key
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_SSH_HOST }}
+          username: ${{ secrets.VPS_SSH_NAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          source: "build/"
+          target: ${{ secrets.VPS_SSH_PATH }}
+          script: |
+            rm -rf ${{ secrets.VPS_SSH_PATH }}/*
+            cp -r build/* ${{ secrets.VPS_SSH_PATH }}/
