@@ -19,6 +19,7 @@ jobs:
             cd ${{ secrets.VPS_SSH_PATH }}
             git pull origin master
             npm install
+            npm run lint
             npm run build
-            npm run start
-            pm2 restart site-libellule
+            pm2 reload libellule-site || pm2 start ecosystem.config.js
+            exit 0
