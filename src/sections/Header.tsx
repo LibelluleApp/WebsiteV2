@@ -138,12 +138,14 @@ export default function Header() {
       {/* Version mobile */}
       <div className="md:hidden relative">
         <div className="flex justify-between items-center px-8 py-4 z-50">
-          <Link href="/" className="flex items-center gap-[9px] z-50">
-            <Image src="/logo.svg" alt="Logo" width={16} height={21} />
-            <h1 className="text-xl font-black font-ubuntu text-blue-700 tracking-tight-custom">
-              Libellule
-            </h1>
-          </Link>
+          <motion.div whileTap={{ scale: 0.8 }} className="z-50">
+            <Link href="/" className="flex items-center gap-[9px]">
+              <Image src="/logo.svg" alt="Logo" width={16} height={21} />
+              <h1 className="text-xl font-black font-ubuntu text-blue-700 tracking-tight-custom">
+                Libellule
+              </h1>
+            </Link>
+          </motion.div>
           <motion.button
             whileTap={{ scale: 0.85 }}
             onClick={toggleMenu}
