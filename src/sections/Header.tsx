@@ -89,12 +89,14 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-30">
       {/* Version desktop */}
       <div className="hidden md:flex justify-between items-center px-8 bg-white shadow">
-        <Link href="/" className="flex items-center gap-[9px]">
-          <Image src="/logo.svg" alt="Logo" width={20} height={30} />
-          <h1 className="text-2xl font-black font-ubuntu text-blue-700 tracking-tight-custom">
-            Libellule
-          </h1>
-        </Link>
+        <motion.div whileTap={{ scale: 0.8 }}>
+          <Link href="/" className="flex items-center gap-[9px]">
+            <Image src="/logo.svg" alt="Logo" width={20} height={30} />
+            <h1 className="text-2xl font-black font-ubuntu text-blue-700 tracking-tight-custom">
+              Libellule
+            </h1>
+          </Link>
+        </motion.div>
         <nav className="relative">
           {/* Indicateur animé */}
           <motion.div

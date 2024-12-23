@@ -24,7 +24,8 @@ export const Accordion: React.FC<AccordionProps> = ({
   return (
     <div className="w-full space-y-2">
       {items.map((item, index) => (
-        <div
+        <motion.div
+          whileTap={{ scale: 0.95 }}
           key={index}
           className="border border-grey rounded-lg overflow-hidden"
         >
@@ -79,7 +80,7 @@ export const Accordion: React.FC<AccordionProps> = ({
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
