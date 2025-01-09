@@ -39,7 +39,7 @@ export default function Header() {
                 ) : null}
               </li>
             </Link>
-            <Link href="/don" className="relative text-blue-900 font-medium">
+            {/* <Link href="/don" className="relative text-blue-900 font-medium">
               <li className="py-4">
                 Nous soutenir
                 {pathname === "/don" ? (
@@ -49,7 +49,7 @@ export default function Header() {
                   />
                 ) : null}
               </li>
-            </Link>
+            </Link> */}
           </ul>
         </nav>
         <div className="flex gap-4">
@@ -107,7 +107,7 @@ export default function Header() {
                     Découvrir Libellule
                   </Link>
                 </motion.div>
-                <motion.div
+                {/* <motion.div
                   exit={{ opacity: 0, y: -10 }}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ export default function Header() {
                   >
                     Nous soutenir
                   </Link>
-                </motion.div>
+                </motion.div> */}
               </nav>
               <div className="flex gap-4">
                 <motion.div
