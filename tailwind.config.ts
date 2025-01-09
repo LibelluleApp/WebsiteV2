@@ -9,7 +9,7 @@ export default {
   ],
   theme: {
     screens: {
-      xs: "375px",
+      xs: "420px",
       // => @media (min-width: 375px) { ... }
 
       s: "540px",
@@ -31,6 +31,10 @@ export default {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      maxWidth: {
+        "8xl": "96rem",
+        "9xl": "108rem",
+      },
       fontFamily: {
         "host-grotesk": ["var(--font-host-grotesk)", "sans-serif"],
         outfit: ["var(--font-outfit)", "sans-serif"],
@@ -73,6 +77,7 @@ export default {
           border: "var(--blue-ribbon-200)",
           bg: "var(--blue-ribbon-900)",
         },
+        background: "#F3F8FF",
         pink: { border: "#FBCFE8", bg: "#831843" },
         purple: { border: "#DDD6FE", bg: "#4C1D95" },
         orange: { border: "#FED7AA", bg: "#78350F" },

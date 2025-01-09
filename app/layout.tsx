@@ -6,7 +6,8 @@ import {
   Gochi_Hand,
 } from "next/font/google";
 import "./globals.css";
-import Header from "@/src/components/header";
+import Header from "@/src/sections/Header";
+import Footer from "@/src/sections/Footer";
 
 const gochiHand = Gochi_Hand({
   variable: "--font-gochi-hand",
@@ -30,7 +31,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Libellule",
+  title: "Libellule - L'application des étudiants de l'IUT d'Angoulême",
   description: "Une app oui !",
 };
 
@@ -40,12 +41,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="h-full">
+    <html lang="fr">
       <body
         className={`${outfit.variable} ${hostGrotesk.variable} ${ubuntu.variable} ${gochiHand.variable} antialiased h-full font-outfit`}
       >
         <Header />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

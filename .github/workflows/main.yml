@@ -1,0 +1,25 @@
+name: Déploiement sur le VPS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy and build on VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_SSH_HOST }}
+          username: ${{ secrets.VPS_SSH_NAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            cd ${{ secrets.VPS_SSH_PATH }}
+            git pull origin master
+            npm install
+            npm run lint
+            npm run build
+            pm2 reload libellule-site || pm2 start ecosystem.config.js
+            exit 0
