@@ -13,12 +13,12 @@ const navLinks = [
     color: "text-blue-700",
     indicatorColor: "bg-blue-700",
   },
-  {
-    href: "/don",
-    label: "Nous soutenir",
-    color: "text-blue-900",
-    indicatorColor: "bg-blue-900",
-  },
+  // {
+  //   href: "/don",
+  //   label: "Nous soutenir",
+  //   color: "text-blue-900",
+  //   indicatorColor: "bg-blue-900",
+  // },
 ];
 
 const socialLinks = [
@@ -178,7 +178,7 @@ export default function Header() {
                     Découvrir Libellule
                   </Link>
                 </motion.div>
-                <motion.div
+                {/* <motion.div
                   exit={{ opacity: 0, y: -10 }}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ export default function Header() {
                   >
                     Nous soutenir
                   </Link>
-                </motion.div>
+                </motion.div> */}
               </nav>
               <div className="flex gap-4">
                 {socialLinks.map(({ href, Icon }) => (
