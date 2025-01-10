@@ -86,7 +86,7 @@ export default function TimelineSection() {
             </div>
           </div>
           <div className="md:h-[430px] lg:items-stretch lg:w-[1000px] lg:h-auto h-[400px] relative w-full items-center">
-            <div className="s:w-[500px] md:w-[600px] lg:w-[500px] md:h-[430px] lg:h-[400px] absolute w-[480px] h-[370px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 flex justify-between items-center">
+            <div className="s:w-[500px] md:w-[600px] lg:w-[500px] md:h-[430px] lg:h-[400px] xl:h-[500px] absolute w-[480px] h-[370px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 flex justify-between items-center">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
