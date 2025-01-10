@@ -31,6 +31,27 @@ export default function Patchnotes() {
 
   const faqItems: AccordionItem[] = [
     {
+      title: "Version 1.1.4",
+      content: (
+        <div className="flex flex-col gap-4">
+          <ItemPatchnote
+            name="Scolarité"
+            content={[
+              "Ajout des absences justifiées et injustifiées.",
+              "Ajout des notes avec les moyennes des différentes compétences.",
+            ]}
+          />
+          <ItemPatchnote
+            name="Devoirs"
+            content={[
+              "Correction du scroll dans les vues : semaine et journée.",
+            ]}
+          />
+        </div>
+      ),
+      date: "20/11/2024",
+    },
+    {
       title: "Version 1.0.1",
       content: (
         <div className="flex flex-col gap-4">
