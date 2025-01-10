@@ -49,7 +49,7 @@ export default function Patchnotes() {
           />
         </div>
       ),
-      date: "20/11/2024",
+      date: "10/01/2025",
     },
     {
       title: "Version 1.0.1",
