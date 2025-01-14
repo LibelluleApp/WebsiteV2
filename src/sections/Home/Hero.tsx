@@ -155,7 +155,7 @@ export default function HeroSection() {
             }}
             className="s:text-xl md:text-center text-lg text-start text-grey font-outfit max-w-[700px]"
           >
-            Libellule a été imagidiants de l’IUT d’Angoulême pour regrouper tous
+            Libellule a été imaginé par des étudiants de l’IUT d’Angoulême pour regrouper tous
             les services de l’université de Poitiers.
           </motion.h3>
         </div>
