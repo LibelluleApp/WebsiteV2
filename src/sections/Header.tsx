@@ -215,7 +215,7 @@ export default function Header() {
 
         <motion.div
           initial={{ height: "55px" }}
-          animate={{ height: isMenuOpen ? "155px" : "55px" }}
+          animate={{ height: isMenuOpen ? "110px" : "55px" }}
           transition={{ type: "spring", bounce: 0.35 }}
           className="absolute top-0 right-0 bg-white shadow w-full z-40"
         ></motion.div>
