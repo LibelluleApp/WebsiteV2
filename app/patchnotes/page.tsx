@@ -31,6 +31,30 @@ export default function Patchnotes() {
 
   const faqItems: AccordionItem[] = [
     {
+      title: "Version 1.1.5",
+      content: (
+        <div className="flex flex-col gap-4">
+          <ItemPatchnote
+            name="Scolarité"
+            content={["Changement de semestre."]}
+          />
+          <ItemPatchnote
+            name="Profil"
+            content={[
+              "Ajout d'une page pour changer de TP (une fois par mois maximum)",
+            ]}
+          />
+          <ItemPatchnote
+            name="Autre"
+            content={[
+              "Résolution du problème d'envoi des mails à la suite du mot passe oublié.",
+            ]}
+          />
+        </div>
+      ),
+      date: "10/01/2025",
+    },
+    {
       title: "Version 1.1.4",
       content: (
         <div className="flex flex-col gap-4">
