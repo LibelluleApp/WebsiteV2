@@ -63,11 +63,14 @@ export default function TimelineSection() {
                 />
                 <div className="flex flex-col gap-2">
                   <p className="text-blue-800 text-base font-normal leading-[27px]">
-                    Après notre première année en MMI, nous avons pu nous rendre
-                    compte du{" "}
-                    <span className="font-semibold">manque de simplicité</span>{" "}
-                    et de <span className="font-semibold">modernité</span> des
-                    outils de l’université de Poitiers.
+                    Après notre première année en MMI, nous avons remarqué que
+                    les outils de l’université de Poitiers ne répondaient pas
+                    toujours aux <span className="font-semibold">usages</span>{" "}
+                    et{" "}
+                    <span className="font-semibold">
+                      attentes des étudiants
+                    </span>
+                    , notamment sur mobile.
                   </p>
                   <p className="text-blue-800 text-base font-normal leading-[27px]">
                     Nous avons donc imaginé et développé une première
