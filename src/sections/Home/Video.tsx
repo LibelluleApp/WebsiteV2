@@ -30,7 +30,7 @@ export default function VideoSection() {
               <YouTubeEmbed
                 videoid={mainVideoId}
                 params="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                style={{ width: '100%', height: '100%' }}
+                style="width: '100%'; height: '100%'"
                 playlabel="Lire la vidéo principale"
               />
           </div>
@@ -38,7 +38,7 @@ export default function VideoSection() {
               <YouTubeEmbed
                 videoid={verticalVideoId1}
                 params="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                style={{ width: '100%', height: '100%' }}
+                style="width: '100%'; height: '100%'"
                 playlabel="Lire la vidéo verticale 1"
               />
           </div>
@@ -46,7 +46,7 @@ export default function VideoSection() {
               <YouTubeEmbed
                 videoid={verticalVideoId2}
                 params="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                style={{ width: '100%', height: '100%' }}
+                style="width: '100%', height: '100%'"
                 playlabel="Lire la vidéo verticale 2"
               />
           </div>
