@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   title: "Libellule - L'application des étudiants de l'IUT d'Angoulême",
   description: "Une app oui !",
   itunes: {
-    appId: 'id6502843331',
+    appId: '6502843331',
   },
   openGraph: {
     title: "Libellule - L'application des étudiants de l'IUT d'Angoulême",
