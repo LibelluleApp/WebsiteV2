@@ -2,6 +2,21 @@
 import TitleSection from "@/src/components/titleSection";
 import "@justinribeiro/lite-youtube";
 
+// Déclaration des types pour lite-youtube
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'lite-youtube': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & {
+        videoid: string;
+        playlabel?: string;
+        params?: string;
+        short?: boolean;
+        videotitle?: string;
+      }, HTMLElement>;
+    }
+  }
+}
+
 export default function VideoSection() {
   const mainVideoId = "30EjVuj1e7M";
   const verticalVideoId1 = "ULzIpc4vo6M";
@@ -35,7 +50,6 @@ export default function VideoSection() {
               videoid={verticalVideoId1}
               videotitle="Lire la vidéo verticale 1"
               params="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              short
             ></lite-youtube>
           </div>
           <div className="h-[700px] lg:h-[450px] md:h-[800px] rounded-xl overflow-hidden">
@@ -43,7 +57,6 @@ export default function VideoSection() {
               videoid={verticalVideoId2}
               videotitle="Lire la vidéo verticale 2"
               params="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              short
             ></lite-youtube>
           </div>
         </div>
