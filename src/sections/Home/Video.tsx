@@ -2,20 +2,33 @@
 import TitleSection from "@/src/components/titleSection";
 import "@justinribeiro/lite-youtube";
 
-// Déclaration des types pour lite-youtube
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'lite-youtube': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & {
-        videoid: string;
-        playlabel?: string;
-        params?: string;
-        short?: boolean;
-        videotitle?: string;
-      }, HTMLElement>;
-    }
-  }
-}
+// Création d'un composant wrapper pour lite-youtube
+import React from 'react';
+
+type LiteYouTubeProps = {
+  videoid: string;
+  videotitle?: string;
+  params?: string;
+  videoStartAt?: string;
+  short?: boolean;
+};
+
+// Composant wrapper pour lite-youtube
+const LiteYouTube = ({ videoid, videotitle, params, videoStartAt, short }: {
+  videoid: string;
+  videotitle?: string;
+  params?: string;
+  videoStartAt?: string;
+  short?: boolean;
+}) => {
+  return React.createElement('lite-youtube', {
+    videoid,
+    videotitle,
+    params,
+    videoStartAt,
+    short: short ? 'true' : undefined
+  });
+};
 
 export default function VideoSection() {
   const mainVideoId = "30EjVuj1e7M";
@@ -39,25 +52,27 @@ export default function VideoSection() {
       <div className="grid gap-4">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 md:grid-cols-2">
           <div className="h-[350px] md:h-[450px] lg:col-span-2 md:col-span-2 rounded-xl overflow-hidden">
-            <lite-youtube 
+            <LiteYouTube 
               videoid={mainVideoId}
               videotitle="Lire la vidéo principale"
               params="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></lite-youtube>
+            />
           </div>
           <div className="h-[700px] lg:h-[450px] md:h-[800px] rounded-xl overflow-hidden">
-            <lite-youtube 
+            <LiteYouTube 
               videoid={verticalVideoId1}
               videotitle="Lire la vidéo verticale 1"
               params="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></lite-youtube>
+              short={true}
+            />
           </div>
           <div className="h-[700px] lg:h-[450px] md:h-[800px] rounded-xl overflow-hidden">
-            <lite-youtube 
+            <LiteYouTube 
               videoid={verticalVideoId2}
               videotitle="Lire la vidéo verticale 2"
               params="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            ></lite-youtube>
+              short={true}
+            />
           </div>
         </div>
       </div>
