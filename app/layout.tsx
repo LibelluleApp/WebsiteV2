@@ -33,6 +33,17 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Libellule - L'application des étudiants de l'IUT d'Angoulême",
   description: "Une app oui !",
+  itunes: {
+    appId: 'id6502843331',
+  },
+  openGraph: {
+    title: "Libellule - L'application des étudiants de l'IUT d'Angoulême",
+    type: "website",
+    url: "https://libellule.app",
+    siteName: "Libellule",
+    description: "Libellule : l'app pour les étudiants de l'IUT d'Angoulême. Emploi du temps, notes, absences, e-mails et agenda collaboratif en un clic. Téléchargez-la et rejoignez 200+ utilisateurs !",
+    locale: "fr_FR"
+  }
 };
 
 export default function RootLayout({
