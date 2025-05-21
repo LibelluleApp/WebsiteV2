@@ -5,14 +5,6 @@ import "@justinribeiro/lite-youtube";
 // Création d'un composant wrapper pour lite-youtube
 import React from 'react';
 
-type LiteYouTubeProps = {
-  videoid: string;
-  videotitle?: string;
-  params?: string;
-  videoStartAt?: string;
-  short?: boolean;
-};
-
 // Composant wrapper pour lite-youtube
 const LiteYouTube = ({ videoid, videotitle, params, videoStartAt, short }: {
   videoid: string;
