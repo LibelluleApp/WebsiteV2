@@ -25,7 +25,7 @@ export default function VideoSection() {
             <YouTubeEmbed
               videoid="30EjVuj1e7M"
               params="controls=1"
-              className="w-full h-full rounded-xl"
+              style="w-full h-full rounded-xl"
             />
           </div>
 
@@ -33,14 +33,14 @@ export default function VideoSection() {
             <YouTubeEmbed
               videoid="ULzIpc4vo6M"
               params="controls=1"
-              className="w-full h-full rounded-xl"
+              style="w-full h-full rounded-xl"
             />
           </div>
           <div className="h-[700px] lg:h-[450px] md:h-[800px]">
             <YouTubeEmbed
               videoid="V4LlmDt5jPY"
               params="controls=1"
-              className="w-full h-full rounded-xl"
+              style="w-full h-full rounded-xl"
             />
           </div>
         </div>
