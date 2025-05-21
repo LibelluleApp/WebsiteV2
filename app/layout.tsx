@@ -9,6 +9,7 @@ import "./globals.css";
 import Header from "@/src/sections/Header";
 import Footer from "@/src/sections/Footer";
 
+
 const gochiHand = Gochi_Hand({
   variable: "--font-gochi-hand",
   subsets: ["latin"],
