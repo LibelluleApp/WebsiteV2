@@ -39,6 +39,7 @@ export default function VideoSection() {
               src="https://www.youtube.com/embed/30EjVuj1e7M"
               className="w-full h-full rounded-xl"
               allowFullScreen
+              loading="lazy"
             />
           </div>
 
@@ -48,6 +49,7 @@ export default function VideoSection() {
               src="https://www.youtube.com/embed/ULzIpc4vo6M"
               className="w-full h-full rounded-xl"
               allowFullScreen
+              loading="lazy"
             />
           </div>
           <div className="h-[700px] lg:h-[450px] md:h-[800px]">
@@ -55,6 +57,7 @@ export default function VideoSection() {
               src="https://www.youtube.com/embed/V4LlmDt5jPY"
               className="w-full h-full rounded-xl"
               allowFullScreen
+              loading="lazy"
             />
           </div>
         </div>
