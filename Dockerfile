@@ -1,29 +1,27 @@
-# Étape 1 : Build de l'application
+# Étape 1 : Build l'application
 FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-# Installer uniquement les deps nécessaires au build
+# Installer deps
 COPY package*.json ./
 RUN npm install
 
-# Copier le code source et build
+# Copier le code et générer Prisma + build
 COPY . .
 RUN npm run build
 
-# Étape 2 : Image de production
+# Étape 2 : Image de prod
 FROM node:22-alpine
 
 WORKDIR /app
 
-# Copier uniquement les fichiers nécessaires pour exécuter l'app
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/next.config.ts ./next.config.ts
+# Installer uniquement les deps prod
+COPY package*.json ./
+RUN npm install --omit=dev
 
-# Installer uniquement les dépendances de production
-RUN npm ci --omit=dev
+# Copier le build
+COPY --from=builder /app ./
 
 EXPOSE 3002
 
