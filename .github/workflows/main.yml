@@ -1,25 +1,25 @@
-name: Déploiement sur le VPS
+name: Build and Deploy
 
 on:
   push:
     branches:
-      - master
+      - deploy # ou la branche que tu utilises
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Deploy and build on VPS
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.VPS_SSH_HOST }}
-          username: ${{ secrets.VPS_SSH_NAME }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          script: |
-            cd ${{ secrets.VPS_SSH_PATH }}
-            git pull origin master
-            npm install
-            npm run lint
-            npm run build
-            pm2 reload libellule-site || pm2 start ecosystem.config.js
-            exit 0
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      # Ici tu peux ajouter les étapes pour déployer si besoin
